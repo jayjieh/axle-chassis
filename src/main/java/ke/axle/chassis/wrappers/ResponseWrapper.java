@@ -15,7 +15,7 @@ import java.util.Date;
  * @version 0.0.1
  * @author Owori Juma
  * @version 1.2.3
- * @param <T> data type
+ * param <T> data type
  */
 public class ResponseWrapper <T> implements Serializable{  
     /**
@@ -46,7 +46,7 @@ public class ResponseWrapper <T> implements Serializable{
 
     /**
      * Get status code
-     * @return 
+     * return
      */
     public int getCode() {
         return code;
@@ -54,7 +54,7 @@ public class ResponseWrapper <T> implements Serializable{
 
     /**
      * Set status code
-     * @param code 
+     * param code 
      */
     public void setCode(int code) {
         this.code = code;
@@ -62,7 +62,7 @@ public class ResponseWrapper <T> implements Serializable{
 
     /**
      * get response message
-     * @return 
+     * return
      */
     public String getMessage() {
         return message;
@@ -70,7 +70,7 @@ public class ResponseWrapper <T> implements Serializable{
 
     /**
      * Set response message
-     * @param message 
+     * param message 
      */
     public void setMessage(String message) {
         this.message = message;
@@ -78,7 +78,7 @@ public class ResponseWrapper <T> implements Serializable{
 
     /**
      * Get response data
-     * @return 
+     * return
      */
     public T getData() {
         return data;
@@ -86,7 +86,7 @@ public class ResponseWrapper <T> implements Serializable{
 
     /**
      * Set response data
-     * @param data 
+     * param data 
      */
     public void setData(T data) {
         this.data = data;
@@ -94,7 +94,7 @@ public class ResponseWrapper <T> implements Serializable{
 
     /**
      * Get response timestamp
-     * @return 
+     * return
      */
     public Long getTimestamp() {
         return timestamp;
@@ -102,7 +102,7 @@ public class ResponseWrapper <T> implements Serializable{
 
     /**
      * Set response timestamp
-     * @param timestamp 
+     * param timestamp 
      */
     public void setTimestamp(Long timestamp) {
         this.timestamp = timestamp;

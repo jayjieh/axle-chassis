@@ -39,7 +39,7 @@ public class ActionWrapper<T> {
 
     /**
      * Get ID(s)
-     * @return array of ID(s)
+     * return array of ID(s)
      */
     public T[] getIds() {
         return ids;
@@ -47,7 +47,7 @@ public class ActionWrapper<T> {
 
     /**
      * Set entity ID(s)
-     * @param ids 
+     * param ids
      */
     public void setIds(T[] ids) {
         this.ids = ids;
@@ -55,7 +55,7 @@ public class ActionWrapper<T> {
 
     /**
      * Get action notes
-     * @return a {@link String) of notes
+     * return a {link String) of notes
      */
     public String getNotes() {
         return notes;
@@ -63,7 +63,7 @@ public class ActionWrapper<T> {
 
     /**
      * Set action notes
-     * @param notes 
+     * param notes
      */
     public void setNotes(String notes) {
         this.notes = notes;

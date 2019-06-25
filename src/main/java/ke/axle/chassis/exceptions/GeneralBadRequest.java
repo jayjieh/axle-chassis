@@ -23,7 +23,7 @@ public class GeneralBadRequest extends Exception {
 
     /**
      * Instantiates class with default exception message
-     * @param msg exception description
+     * param msg exception description
      */
     public GeneralBadRequest(String msg){
         super(msg);
@@ -31,8 +31,8 @@ public class GeneralBadRequest extends Exception {
     
     /**
      * Instantiates class with default exception message and {@link HttpStatus}
-     * @param msg exception description
-     * @param status response status e.g. 417 
+     * param msg exception description
+     * param status response status e.g. 417
      */
     public GeneralBadRequest(String msg, HttpStatus status){
         super(msg);
@@ -41,8 +41,8 @@ public class GeneralBadRequest extends Exception {
     
     /**
      * Used to set the {@link HttpStatus}
-     * @param status 
-     * @return current object
+     * param status
+     * return current object
      */
     public GeneralBadRequest setHttpStatus(HttpStatus status){
         this.status = status;
@@ -51,7 +51,7 @@ public class GeneralBadRequest extends Exception {
     
     /**
      * Used to return {@link HttpStatus}
-     * @return 
+     * return
      */
     public HttpStatus getHttpStatus(){
         return status;

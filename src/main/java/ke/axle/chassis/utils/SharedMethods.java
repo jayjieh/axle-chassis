@@ -79,8 +79,8 @@ public class SharedMethods {
      * Used to get all errors each mapped to the relevant field. Quiet handy
      * when returning API error responses
      *
-     * @param validation
-     * @return a {@link Map} of all errors
+     * param validation
+     * return a {link Map} of all errors
      */
     public static Map<String, String> getFieldMapErrors(BindingResult validation) {
         return validation.getFieldErrors().stream().collect(Collectors.toMap(FieldError::getField, FieldError::getDefaultMessage));
@@ -88,8 +88,8 @@ public class SharedMethods {
     
     /**
      * Converts errors into a string
-     * @param error
-     * @return {@link String} of errors
+     * param error
+     * return {link String} of errors
      */
     public static String getFieldErrorsString(Errors error) {
         String eString = "";
@@ -110,12 +110,12 @@ public class SharedMethods {
     /**
      * Used to Read MultipartFile resource e.g a CSV file
      *
-     * @param resource MultipartFile resource to be read
-     * @param uploadPath
-     * @throws FileNotFoundException, IOException when errors occur searching
+     * param resource MultipartFile resource to be read
+     * param uploadPath
+     * throws FileNotFoundException, IOException when errors occur searching
      * for the file or reading the file
-     * @return
-     * @throws IOException
+     * return
+     * throws IOException
      */
     public String store(MultipartFile resource, String uploadPath) throws FileNotFoundException, IOException {
         log.info("Processing file storage for file " + resource.getOriginalFilename());
@@ -131,9 +131,9 @@ public class SharedMethods {
     /**
      * Used to write multipart file in syste file
      *
-     * @param resource
-     * @param uploadPath
-     * @return
+     * param resource
+     * param uploadPath
+     * return
      * @throws FileNotFoundException
      * @throws IOException
      */
@@ -154,8 +154,8 @@ public class SharedMethods {
      * Used to split string by camel case and convert it to title case e.g.
      * "camelCase" will be "Camel Case"
      *
-     * @param camelString
-     * @return
+     * param camelString
+     * return
      */
     public static String splitCamelString(String camelString) {
         return StringUtils.capitalize(StringUtils.join(
@@ -165,8 +165,8 @@ public class SharedMethods {
     /**
      * Split car registration number e.i KBC345K to KBC 345K
      *
-     * @param regNumber
-     * @return 
+     * param regNumber
+     * return
      */
     public static String splitCarReg(String regNumber) {
         String refString;
@@ -186,7 +186,7 @@ public class SharedMethods {
      *
      * @param <T> 
      * @param entity
-     * @return entity name as a {@link String}
+     * @return entity name as a {link String}
      */
     public static <T> String getEntityName(Class<T> entity) {
 //        Table table = entity.getAnnotation(Table.class);
@@ -197,8 +197,8 @@ public class SharedMethods {
     /**
      * Encrypt text
      *
-     * @param text 
-     * @return base64 encoded encrypted {@link String} or the un encrypted text if an error occurs
+     * param text
+     * return base64 encoded encrypted {link String} or the un encrypted text if an error occurs
      */
     public static String encryptText(String text) {
         try {
@@ -217,8 +217,8 @@ public class SharedMethods {
     /**
      * Decrypt text
      *
-     * @param encryptedText base64 encoded
-     * @return the decrypted text or encrypted text if an error occurs
+     * param encryptedText base64 encoded
+     * return the decrypted text or encrypted text if an error occurs
      */
     public static String decryptText(String encryptedText) {
 
@@ -237,8 +237,8 @@ public class SharedMethods {
     /**
      * Get the id value of an entity
      *
-     * @param entity 
-     * @return id value
+     * param entity
+     * return id value
      */
     public static Object getEntityIdValue(Object entity) {
         for (Field field : entity.getClass().getDeclaredFields()) {
@@ -252,8 +252,8 @@ public class SharedMethods {
     /**
      * Used to get generic classes declared by a template
      *
-     * @param clazz the generic class
-     * @return a {@link List} of {@link Class}(s)
+     * param clazz the generic class
+     * return a {link List} of {link Class}(s)
      */
     public static List<Class> getGenericClasses(Class clazz) {
         List<Class> classes = new ArrayList<>();

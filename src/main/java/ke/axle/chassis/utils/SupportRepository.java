@@ -46,8 +46,8 @@ import org.springframework.beans.BeanWrapperImpl;
  * Used to handle update requests (persisting changes in the edited entity, fetching changes,
  * declining changes and updating entity with the changes from edited entity)
  *
- * @param <T> entity affected by the changes
- * @param <E> edited entity used to store changes temporarily before approval
+ * param <T> entity affected by the changes
+ * param <E> edited entity used to store changes temporarily before approval
  * @author Cornelius M
  * @version 0.0.1
  * @author Owori Juma
@@ -79,9 +79,9 @@ public class SupportRepository<T, E> {
     /**
      * Used to instantiate the class
      *
-     * @param entityManager   entity manager to handle transactions
-     * @param entityMapping   entity mapping
-     * @param editedEnMapping edited entity mapping
+     * param entityManager   entity manager to handle transactions
+     * param entityMapping   entity mapping
+     * param editedEnMapping edited entity mapping
      */
     public SupportRepository(EntityManager entityManager, Class<T> entityMapping, Class<E> editedEnMapping) {
         this.entityManager = entityManager;
@@ -94,23 +94,6 @@ public class SupportRepository<T, E> {
      * Checks if changes were made if true it persists changes to entity
      * storage. This method is different from super class since changes don't
      * affect the original entity they are saved in the edit entity first
-     *
-     * @param entity     current entity
-     * @param oldEntity
-     * @param editEntity entity storage
-     * @return {@link List} of changes or an empty {@link List} if changes were
-     * not found found
-     * @throws java.lang.IllegalAccessException                   if it fails to locate Id field
-     * @throws com.fasterxml.jackson.core.JsonProcessingException if it fails to
-     *                                                            save the current entity to entity storage
-     * @throws ExpectationFailed                                  When editEntity param does not have fields
-     *                                                            annotated;
-     *                                                            <ul>
-     *                                                            <li>@{@link EditDataWrapper} used to store new edited data</li>
-     *                                                            <li>@{@link EditEntityId} used to store the id of the entity being
-     *                                                            updated</li>
-     *                                                            <li>@{@link EditEntity} used to store name of entity being updated</li>
-     *                                                            </ul>
      */
     public List<String> handleEditRequest(T entity, T oldEntity, Class<E> editEntity) throws
             IllegalAccessException, JsonProcessingException, ExpectationFailed {
@@ -196,12 +179,12 @@ public class SupportRepository<T, E> {
     }
 
     /**
-     * Used to fetch {@ List} of changes
+     * Used to fetch { List} of changes
      *
-     * @param newbean updated entity
-     * @param oldbean old entity
-     * @return a {@link List} of {@link String} changes
-     * @throws IllegalAccessException if fields with changes are not accessible
+     * param newbean updated entity
+     * param oldbean old entity
+     * return a {link List} of {link String} changes
+     * throws IllegalAccessException if fields with changes are not accessible
      */
     public List<String> fetchChanges(T oldbean, T newbean) throws IllegalAccessException {
         List<String> changes = new ArrayList<>();
@@ -239,13 +222,13 @@ public class SupportRepository<T, E> {
     }
 
     /**
-     * Used to fetch {@ List} of changes
+     * Used to fetch { List} of changes
      *
-     * @param id entity id
-     * @param t  the old entity
-     * @return a {@link List} of {@link String} changes
-     * @throws java.lang.IllegalAccessException if fields with changes are not accessible
-     * @throws java.io.IOException              if changes cannot be mapped back to entity
+     * param id entity id
+     * param t  the old entity
+     * return a {link List} of {link String} changes
+     * throws java.lang.IllegalAccessException if fields with changes are not accessible
+     * throws java.io.IOException              if changes cannot be mapped back to entity
      */
     public List<String> fetchChanges(Serializable id, T t) throws IllegalAccessException, IOException {
         List<String> changes = new ArrayList<>();
@@ -305,8 +288,8 @@ public class SupportRepository<T, E> {
     /**
      * Fetch entity excluding entities in trash
      *
-     * @param id entity id
-     * @return persistent context entity
+     * param id entity id
+     * return persistent context entity
      */
     public T fetchEntity(Serializable id) {
         //get id field name
@@ -344,16 +327,6 @@ public class SupportRepository<T, E> {
     /**
      * Used to merge entity from Storage. Updates new values from edited record
      * to the provided entity
-     *
-     * @param t  The old entity cannot be null
-     * @param id Unique key id of this entity
-     * @return T new merged changes or the current entity if changes could not
-     * be found
-     * @throws java.io.IOException              occurs when changes cannot be mapped back to
-     *                                          entity
-     * @throws java.lang.IllegalAccessException occurs when the field annotated
-     *                                          with @{@link ModifiableField} is not accessible
-     * @throws NullPointerException             if t is null
      */
     public T mergeChanges(Serializable id, T t) throws IOException, IllegalArgumentException, IllegalAccessException {
 
@@ -413,11 +386,11 @@ public class SupportRepository<T, E> {
     /**
      * Update entity with changes from the new object
      *
-     * @param oldbean
-     * @param newbean
-     * @return updated bean
-     * @throws IllegalAccessException occurs when the field annotated with
-     * @{@link ModifiableField} is not accessible
+     * param oldbean
+     * param newbean
+     * return updated bean
+     * throws IllegalAccessException occurs when the field annotated with
+     * {link ModifiableField} is not accessible
      */
     public T updateEdit(T newbean, T oldbean) throws IllegalAccessException {
         final Field[] allFields = newbean.getClass().getDeclaredFields();
@@ -445,8 +418,8 @@ public class SupportRepository<T, E> {
     /**
      * Used to decline entity changes. It clears data from the EditEntity
      *
-     * @param id entity id
-     * @throws java.lang.IllegalAccessException if modified fields cannot be accessed
+     * param id entity id
+     * throws java.lang.IllegalAccessException if modified fields cannot be accessed
      */
     public void declineChanges(Serializable id) throws IllegalArgumentException, IllegalAccessException {
         E e = this.getEditedEntity(id);

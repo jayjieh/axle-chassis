@@ -63,7 +63,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/TreeRoot.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/Unique.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/ExpectationFailed.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/GeneralBadRequest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/NotFoundException.java">
           <value>
             <set />
           </value>

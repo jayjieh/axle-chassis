@@ -44,14 +44,12 @@ import java.util.*;
 
 /**
  * Exposes the following resource actions;
- * <ul>
- * <li>Create new resource</li>
- * <li>Update existing resource</li>
- * <li>Delete existing resource</li>
- * <li>Approve checker actions</li>
- * <li>Decline checker actions</li>
- * <li>Fetch, filter, search and paginate resources</li>
- * </ul>
+ * Create new resource
+ * Update existing resource
+ * Delete existing resource
+ * Approve checker actions
+ * Decline checker actions
+ * Fetch, filter, search and paginate resources
  *
  * param <T> action entity
  * param <E> id class
@@ -101,12 +99,10 @@ public class ChasisResource<T, E extends Serializable, R> {
      * Used to persist new entities to the database. The following validations
      * are carried out before an entity is persisted:
      * If an id field is present on the entity it will be reset to null.
-     * <ul>
-     * <li>201 on success</li>
-     * <li>409 on unique validation error</li>
-     * <li>400 on validation error</li>
-     * <li>404 for @{link ManyToOne} entities that don't exist</li>
-     * </ul>
+     * 201 on success
+     * 409 on unique validation error
+     * 400 on validation error
+     * 404 for {link ManyToOne} entities that don't exist
      */
     @RequestMapping(method = RequestMethod.POST)
     @Transactional
@@ -199,41 +195,13 @@ public class ChasisResource<T, E extends Serializable, R> {
      * Used to update entities by saving new changes to the edited record
      * entity. For edited record to work The following annotation must be
      * present on the relevant fields to be used to store changes;
-     * <ul>
-     * <li> @{link EditEntity} used to store the name of the entity being
-     * updated preferably should be a string For example
-     * <p>
-     * <code>@{link EditEntity} <br> private {link String}
-     * recordEntity;</code></p>
-     * </li>
-     * <li>@{link EditDataWrapper} used to store changes in JSON format
-     * preferably should be a {link String} For example
-     * <p>
-     * <code>@{link EditDataWrapper}<br>private {link String} data;</code></p>
-     * </li>
-     * <li>@{link EditEntityId} used to store entity id and you can use any
-     * data type that extends {link Serializable} For example
-     * <p>
-     * <code>@{link EditEntityId}<br> private {link Long} entityId; </code>
-     * </p>
-     * </li>
-     * </ul>
-     *
-     * <h4>Note</h4>
      * For created and updated records that have not been approved the changes
      * are persisted to the entity directly without being stored in the edited
      * record entity
      *
      * param t entity containing new changes
      * return {link ResponseEntity} with statuses:
-     * <ul>
-     * <li>200 on success</li>
-     * <li>404 if the entity doesn't exist in the database</li>
-     * <li>400 on validation errors (Relies on javax validation)</li>
-     * <li>409 on unique field validation errors</li>
-     * <li>417 if the entity us pending approval actions or if changes were not
-     * found on the current entity</li>
-     * </ul>
+     *
      * throws IllegalAccessException if a field on the entity could not be
      * accessed
      * throws JsonProcessingException if changes could not be converted to json
@@ -241,7 +209,7 @@ public class ChasisResource<T, E extends Serializable, R> {
      * throws
      * ExpectationFailed When
      * editEntity does not have fields; @{link EditEntity}, @{link EditEntity}
-     * and @{link EditEntityId}
+     * and {link EditEntityId}
      */
     @RequestMapping(method = RequestMethod.PUT)
     @ApiOperation(value = "Update record")
@@ -331,18 +299,17 @@ public class ChasisResource<T, E extends Serializable, R> {
 
     /**
      * Used to delete entities.
-     * <h4>Note</h4>
+     * Note
      * If action and actionStatus fields don't exist the record is moved to
      * trash directly (flagging .
-     * <b>If intrash field doesn't exist the record is deleted permanently</b>
+     * If intrash field doesn't exist the record is deleted permanently
      *
      * param actions contains an array of entity id(s)
      * return {link ResponseEntity} with statuses:
-     * <ul>
-     * <li>200 on success</li>
-     * <li>207 if not all records could be deleted</li>
-     * <li>404 if the entity doesn't exist in the database</li>
-     * </ul>
+     * 200 on success
+     * 207 if not all records could be deleted
+     * 404 if the entity doesn't exist in the database<
+     *
      */
     @RequestMapping(method = RequestMethod.DELETE)
     @ApiOperation(value = "Delete record")
@@ -408,13 +375,11 @@ public class ChasisResource<T, E extends Serializable, R> {
      * ensures only the checker can approve an action
      *
      * param actions containing entities id
-     * return {link ResponseEntity} with statuses:
-     * <ul>
-     * <li>200 on success</li>
-     * <li>404 if the entity doesn't exist in the database</li>
-     * <li>207 if some of the action could be approved successfuly. The data
-     * fields contains more details on records that failed</li>
-     * </ul>
+     * return {link ResponseEntity} with statuses:     *
+     * 200 on success
+     * 404 if the entity doesn't exist in the database<
+     * 207 if some of the action could be approved successfuly. The data
+     * fields contains more details on records that failed
      * throws
      * ExpectationFailed When
      * entity doesn't have action or actionStatus fields
@@ -533,13 +498,6 @@ public class ChasisResource<T, E extends Serializable, R> {
      * only the checker can decline an action
      *
      * param actions
-     * return with statuses:
-     * <ul>
-     * <li>200 on success</li>
-     * <li>404 if the entity doesn't exist in the database</li>
-     * <li>207 if some of the action could be approved successfuly. The data
-     * fields contains more details on records that failed</li>
-     * </ul>
      * throws
      * ExpectationFailed When
      * entity doesn't have action or actionStatus fields
@@ -726,9 +684,9 @@ public class ChasisResource<T, E extends Serializable, R> {
      *
      * param t Entity to be validated
      * throws RuntimeException If the current field doesn't have an id field
-     * (Field annotated with @{link Id})
+     * (Field annotated with {link Id})
      * throws GeneralBadRequest If unique validation fails on a field annotated
-     * with @{link Unique} annotation
+     * with {link Unique} annotation
      */
     private void validateUniqueFields(T t) throws GeneralBadRequest {
 
@@ -830,18 +788,6 @@ public class ChasisResource<T, E extends Serializable, R> {
 
     /**
      * Used to retrieve all entity records.
-     * <h4>Note</h4>
-     * <ul>
-     * <li>If needle parameter is present search will be done on fields
-     * annotated with @{link Searchable} (Search is case insensitive)</li>
-     * <li>If fields annotated with @{link Filter} exist the request will be
-     * searched for parameters with similar name as the field name and if found
-     * the results will be filtered using the filter. For example for field
-     * <pre>@Filter private String name;</pre> expects the request name
-     * parameter to be name. To filter by date range you need to provide to and
-     * from request parameters with a valid String date (dd/MM/yyyy, dd/MM/yyyy
-     * HH:mm:ss.SSS, dd/MM/yyyy HH:mm:ss)</li>
-     * </ul>
      *
      * param pg used to sort and limit the result
      * param request HTTP Request used to get filter and search parameters.

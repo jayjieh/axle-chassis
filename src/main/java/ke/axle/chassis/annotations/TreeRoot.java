@@ -20,7 +20,7 @@ import java.lang.annotation.Target;
 public @interface TreeRoot {
     /**
      * Reserved for future use
-     * @return name as a {@link String}
+     * return name as a {link String}
      */
     String name() default "";
 }

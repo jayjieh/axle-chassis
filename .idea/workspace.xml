@@ -2,8 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b7d5820-f293-4db7-a9f9-1939292b5f9c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/release.properties" beforeDir="false" afterPath="$PROJECT_DIR$/release.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EditEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EditEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EditEntityId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EditEntityId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/NickName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/NickName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/TreeRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/TreeRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/Unique.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/Unique.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/ExpectationFailed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/ExpectationFailed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/GeneralBadRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/GeneralBadRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/NotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/utils/SharedMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/utils/SharedMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/utils/SupportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/utils/SupportRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/wrappers/ActionWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/wrappers/ActionWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/wrappers/ResponseWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/wrappers/ResponseWrapper.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -17,7 +31,88 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/TreeRoot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/Unique.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="28" column="65" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/ExpectationFailed.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/GeneralBadRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="671">
+              <caret line="53" column="7" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/NotFoundException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EditEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/Filter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/ModifiableField.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/NickName.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/Searchable.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -27,91 +122,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/TreeRoot.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/Unique.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/wrappers/ActionWrapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/wrappers/ResponseWrapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1954">
-              <caret line="849" column="13" selection-start-line="849" selection-start-column="13" selection-end-line="849" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/readme.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SECOND">
-              <first_editor relative-caret-position="136">
-                <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3349">
-              <caret line="197" column="36" selection-start-line="197" selection-start-column="36" selection-end-line="197" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml.releaseBackup">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>@thr</find>
+      <find>@link</find>
+      <find>@param</find>
+      <find>&lt;h5&gt;</find>
+      <find>h5</find>
+      <find>@return</find>
     </findStrings>
+    <replaceStrings>
+      <replace>link</replace>
+      <replace>param</replace>
+      <replace>&lt;H5&gt;</replace>
+      <replace>return</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -119,25 +146,29 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/utils/SharedMethods.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/utils/SupportRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/utils/AppConstants.java" />
         <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/utils/ErrorList.java" />
         <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/utils/LoggerService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EditChildEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EditDataWrapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EditEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EditEntityId.java" />
         <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/Filter.java" />
         <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/ModifiableField.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/NickName.java" />
         <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/Searchable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/Unique.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/wrappers/ActionWrapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/wrappers/ResponseWrapper.java" />
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/wrappers/ResponseWrapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/wrappers/ActionWrapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/utils/SupportRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/utils/SharedMethods.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EditEntityId.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/NickName.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EditEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/TreeRoot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/Unique.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/ExpectationFailed.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/GeneralBadRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/NotFoundException.java" />
       </list>
     </option>
   </component>
@@ -169,7 +200,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -210,6 +240,33 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="chassis" type="462c0819:PsiDirectoryNode" />
+              <item name="annotations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringResourceChasis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-crud-chassis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="chassis" type="462c0819:PsiDirectoryNode" />
+              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringResourceChasis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-crud-chassis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="chassis" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringResourceChasis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-crud-chassis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="chassis" type="462c0819:PsiDirectoryNode" />
               <item name="wrappers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -223,8 +280,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="CatdeaLogs" />
+      <pane id="Scope" />
       <pane id="Course" />
+      <pane id="CatdeaLogs" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -257,7 +315,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561461742971</updated>
-      <workItem from="1561461744557" duration="5176000" />
+      <workItem from="1561461744557" duration="5471000" />
+      <workItem from="1561489753505" duration="1242000" />
     </task>
     <task id="LOCAL-00001" summary="Group ID Update">
       <created>1561463845702</created>
@@ -273,36 +332,33 @@
       <option name="project" value="LOCAL" />
       <updated>1561467828815</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Javadoc Fix">
+      <created>1561473326105</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1561473326105</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5176000" />
+    <option name="totallyTimeSpent" value="6713000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="DB Browser" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Capture Tool" />
-      <window_info id="Web" side_tool="true" />
-      <window_info id="Learn" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21215352" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="DB Execution Console" />
-      <window_info anchor="bottom" id="Educational.CheckDetails" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Java Enterprise" />
-      <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="SonarQube" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="DB Browser" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="UI Designer" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info id="Learn" order="8" />
+      <window_info id="Web" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -310,21 +366,31 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" visible="true" weight="0.32995737" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Codota" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Mongo Explorer" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Json Parser" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Jenkins" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Bean Validation" />
+      <window_info anchor="bottom" id="DB Execution Console" order="7" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="15" />
+      <window_info anchor="bottom" id="SonarQube" order="16" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.32995737" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Jenkins" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Mongo Explorer" order="7" />
+      <window_info anchor="right" id="Json Parser" order="8" />
+      <window_info anchor="right" id="Codota" order="9" />
+      <window_info anchor="right" id="Database" order="10" />
+      <window_info anchor="right" id="Palette&#9;" order="11" />
+      <window_info anchor="right" id="Theme Preview" order="12" />
+      <window_info anchor="right" id="SciView" order="13" />
+      <window_info anchor="right" id="Bean Validation" order="14" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,51 +398,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Group ID Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Group ID Update" />
+    <MESSAGE value="Javadoc Fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Javadoc Fix" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/ExpectationFailed.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/GeneralBadRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/NotFoundException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/utils/SharedMethods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="57" column="17" lean-forward="true" selection-start-line="57" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/utils/SupportRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/utils/AppConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/utils/ErrorList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -391,87 +416,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EditDataWrapper.java">
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/lang/Class.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EditChildEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EditEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EditEntityId.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/Filter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/ModifiableField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/NickName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/Searchable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/TreeRoot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/Unique.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/wrappers/ActionWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        <state relative-caret-position="571">
+          <caret line="1493" column="74" lean-forward="true" selection-start-line="1493" selection-start-column="74" selection-end-line="1493" selection-end-column="74" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/wrappers/ResponseWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        <state relative-caret-position="1377">
+          <caret line="98" column="32" selection-start-line="98" selection-start-column="32" selection-end-line="98" selection-end-column="32" />
+          <folding>
+            <element signature="e#1890#1891#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -500,11 +458,130 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1954">
-          <caret line="849" column="13" selection-start-line="849" selection-start-column="13" selection-end-line="849" selection-end-column="13" />
+        <state relative-caret-position="-1995">
+          <caret line="789" column="43" selection-start-line="789" selection-start-column="43" selection-end-line="789" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/wrappers/ActionWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="65" column="7" lean-forward="true" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/utils/AppConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-26">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/utils/SupportRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="49" column="3" selection-start-line="49" selection-start-column="3" selection-end-line="49" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/utils/SharedMethods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1079">
+          <caret line="255" column="32" lean-forward="true" selection-start-line="255" selection-start-column="32" selection-end-line="255" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EditEntityId.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EditChildEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EditDataWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EditEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/Filter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/ModifiableField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/NickName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/Searchable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/TreeRoot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/Unique.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="28" column="65" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/ExpectationFailed.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/GeneralBadRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="671">
+          <caret line="53" column="7" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/NotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
         </state>
       </provider>
     </entry>

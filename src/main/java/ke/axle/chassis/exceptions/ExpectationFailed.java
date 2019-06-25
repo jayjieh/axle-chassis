@@ -18,15 +18,15 @@ public class ExpectationFailed extends GeneralBadRequest {
 
     /**
      * Instantiates class with default exception message
-     * @param msg exception description
+     * param msg exception description
      */
     public ExpectationFailed(String msg) {
         super(msg);
     }
     /**
      * Instantiates class with default exception message and {@link HttpStatus}
-     * @param msg exception description
-     * @param status response status e.g. 417
+     * param msg exception description
+     * param status response status e.g. 417
      */
     public ExpectationFailed(String msg, HttpStatus status) {
         super(msg, status);

@@ -18,8 +18,8 @@ public class NotFoundException extends GeneralBadRequest{
 
     /**
      * Instantiates class with default exception message and {@link HttpStatus}
-     * @param msg exception description
-     * @param status response status e.g. 417  
+     * param msg exception description
+     * param status response status e.g. 417
      */
     public NotFoundException(String msg, HttpStatus status) {
         super(msg, status);
@@ -27,7 +27,7 @@ public class NotFoundException extends GeneralBadRequest{
     
     /**
      * Instantiates class with default exception message
-     * @param message exception description 
+     * param message exception description
      */
     public NotFoundException(String message){
         super(message);

@@ -22,7 +22,7 @@ import java.lang.annotation.Target;
 public @interface NickName {
     /**
      * name of the entity, if not specified record is used
-     * @return 
+     * return
      */
     public String name() default "Record";
 }

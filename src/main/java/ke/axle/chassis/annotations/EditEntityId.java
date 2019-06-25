@@ -22,7 +22,7 @@ import java.lang.annotation.Target;
 public @interface EditEntityId {
     /**
      * Reserved for future use
-     * @return 
+     * return
      */
     String name() default "";
 }

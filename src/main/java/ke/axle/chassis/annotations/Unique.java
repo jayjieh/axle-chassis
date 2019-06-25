@@ -26,10 +26,8 @@ import java.lang.annotation.Target;
 public @interface Unique {
     boolean isCaseSensitive() default false;
     /**
-     * Meaningful field name used for logging and error response. 
-     * <h3>Example</h3>
-     * <p>For field <i><b>"userName"</b></i>, fieldName can be <i><b>"User's Name"</b></i> </p>
-     * @return String
+     * Meaningful field name used for logging and error response.
+     * return String
      */
     String fieldName() default "Field";
 
