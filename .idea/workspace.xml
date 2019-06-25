@@ -2,48 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b7d5820-f293-4db7-a9f9-1939292b5f9c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringResourceChasis-1.2.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cm/projects/spring/resource/chasis/ChasisResource$ExcludeProxiedFields.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cm/projects/spring/resource/chasis/ChasisResource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cm/projects/spring/resource/chasis/annotations/EditChildEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cm/projects/spring/resource/chasis/annotations/EditDataWrapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cm/projects/spring/resource/chasis/annotations/EditEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cm/projects/spring/resource/chasis/annotations/EditEntityId.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cm/projects/spring/resource/chasis/annotations/Filter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cm/projects/spring/resource/chasis/annotations/ModifiableField.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cm/projects/spring/resource/chasis/annotations/NickName.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cm/projects/spring/resource/chasis/annotations/Searchable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cm/projects/spring/resource/chasis/annotations/TreeRoot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cm/projects/spring/resource/chasis/annotations/Unique.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cm/projects/spring/resource/chasis/exceptions/ExpectationFailed.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cm/projects/spring/resource/chasis/exceptions/GeneralBadRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cm/projects/spring/resource/chasis/exceptions/NotFoundException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cm/projects/spring/resource/chasis/utils/AppConstants.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cm/projects/spring/resource/chasis/utils/ErrorList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cm/projects/spring/resource/chasis/utils/LoggerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cm/projects/spring/resource/chasis/utils/SharedMethods.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cm/projects/spring/resource/chasis/utils/SupportRepository$DynamicMixIn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cm/projects/spring/resource/chasis/utils/SupportRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cm/projects/spring/resource/chasis/wrappers/ActionWrapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cm/projects/spring/resource/chasis/wrappers/ResponseWrapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cm.projects.spring.resource.chasis.ChasisResourceTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.cm.projects.spring.resource.chasis.ChasisResourceTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cm/projects/spring/resource/chasis/ChasisResourceTest$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cm/projects/spring/resource/chasis/ChasisResourceTest$LoggerServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cm/projects/spring/resource/chasis/ChasisResourceTest$TestConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cm/projects/spring/resource/chasis/ChasisResourceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cm/projects/spring/resource/chasis/EdittedRecord.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cm/projects/spring/resource/chasis/Gender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cm/projects/spring/resource/chasis/Nerd.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cm/projects/spring/resource/chasis/NerdResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/release.properties" beforeDir="false" afterPath="$PROJECT_DIR$/release.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -58,15 +18,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/NickName.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/Searchable.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -112,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="72" column="7" selection-start-line="72" selection-start-column="7" selection-end-line="72" selection-end-column="7" />
+            <state relative-caret-position="-1954">
+              <caret line="849" column="13" selection-start-line="849" selection-start-column="13" selection-end-line="849" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -141,16 +92,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3366">
-              <caret line="198" column="36" selection-start-line="198" selection-start-column="36" selection-end-line="198" selection-end-column="36" />
+            <state relative-caret-position="3349">
+              <caret line="197" column="36" selection-start-line="197" selection-start-column="36" selection-end-line="197" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml.releaseBackup">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>@thr</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -174,9 +135,9 @@
         <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/Unique.java" />
         <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/wrappers/ActionWrapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/wrappers/ResponseWrapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java" />
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java" />
       </list>
     </option>
   </component>
@@ -296,7 +257,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561461742971</updated>
-      <workItem from="1561461744557" duration="4885000" />
+      <workItem from="1561461744557" duration="5176000" />
     </task>
     <task id="LOCAL-00001" summary="Group ID Update">
       <created>1561463845702</created>
@@ -316,7 +277,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4885000" />
+    <option name="totallyTimeSpent" value="5176000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -330,7 +291,7 @@
       <window_info id="Capture Tool" />
       <window_info id="Web" side_tool="true" />
       <window_info id="Learn" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21215352" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21215352" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="DB Execution Console" />
       <window_info anchor="bottom" id="Educational.CheckDetails" />
@@ -349,7 +310,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="right" id="Maven" visible="true" weight="0.32995737" />
+      <window_info anchor="right" id="Maven" visible="true" weight="0.32995737" />
       <window_info anchor="right" id="Palette" />
       <window_info anchor="right" id="Codota" />
       <window_info anchor="right" id="Capture Analysis" />
@@ -514,16 +475,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="72" column="7" selection-start-line="72" selection-start-column="7" selection-end-line="72" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -539,8 +490,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3366">
-          <caret line="198" column="36" selection-start-line="198" selection-start-column="36" selection-end-line="198" selection-end-column="36" />
+        <state relative-caret-position="3349">
+          <caret line="197" column="36" selection-start-line="197" selection-start-column="36" selection-end-line="197" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml.releaseBackup">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1954">
+          <caret line="849" column="13" selection-start-line="849" selection-start-column="13" selection-end-line="849" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

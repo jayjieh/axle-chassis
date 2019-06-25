@@ -5,16 +5,16 @@
  */
 package ke.axle.chassis;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.google.gson.ExclusionStrategy;
+import com.google.gson.FieldAttributes;
+import io.swagger.annotations.*;
 import ke.axle.chassis.annotations.*;
 import ke.axle.chassis.exceptions.ExpectationFailed;
 import ke.axle.chassis.exceptions.GeneralBadRequest;
 import ke.axle.chassis.utils.*;
 import ke.axle.chassis.wrappers.ActionWrapper;
 import ke.axle.chassis.wrappers.ResponseWrapper;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.google.gson.ExclusionStrategy;
-import com.google.gson.FieldAttributes;
-import io.swagger.annotations.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanWrapper;
@@ -41,8 +41,6 @@ import java.lang.reflect.Field;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 /**
  * Exposes the following resource actions;
@@ -55,9 +53,9 @@ import javax.validation.constraints.Size;
  * <li>Fetch, filter, search and paginate resources</li>
  * </ul>
  *
- * @param <T> action entity
- * @param <E> id class
- * @param <R> Edited entity
+ * param <T> action entity
+ * param <E> id class
+ * param <R> Edited entity
  * @author Cornelius M
  * @version 0.0.1
  * @author Owori Juma
@@ -88,10 +86,7 @@ public class ChasisResource<T, E extends Serializable, R> {
     private String fieldNickname = "field";
     private final String recordName;
 
-    /**
-     * @param loggerService
-     * @param entityManager
-     */
+
     public ChasisResource(LoggerService loggerService, EntityManager entityManager) {
         this.loggerService = loggerService;
         this.entityManager = entityManager;
@@ -105,22 +100,12 @@ public class ChasisResource<T, E extends Serializable, R> {
     /**
      * Used to persist new entities to the database. The following validations
      * are carried out before an entity is persisted:
-     * <h3>Validations</h3>
-     * <ul>
-     * <li>{@link Javax} Validation i.e @{@link NotNull}, @{@link Size}</li>
-     * <li>Unique Fields (Fields annotated with @{@link Unique} annotation</li>
-     * <li>Validates if @{@link ManyToOne} entity exists</li>
-     * </ul>
-     * <h5><i>Note</i></h5>
      * If an id field is present on the entity it will be reset to null.
-     *
-     * @param t New entity to be persisted
-     * @return {@link ResponseEntity} with statuses:
      * <ul>
      * <li>201 on success</li>
      * <li>409 on unique validation error</li>
      * <li>400 on validation error</li>
-     * <li>404 for @{@link ManyToOne} entities that don't exist</li>
+     * <li>404 for @{link ManyToOne} entities that don't exist</li>
      * </ul>
      */
     @RequestMapping(method = RequestMethod.POST)
@@ -198,8 +183,8 @@ public class ChasisResource<T, E extends Serializable, R> {
     /**
      * Used to fetch entity by id
      *
-     * @param id Entity id
-     * @return {@link ResponseEntity} with data field containing the entity
+     * param id Entity id
+     * return {link ResponseEntity} with data field containing the entity
      * (data is null when entity could not be found) and status 200:
      */
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
@@ -215,21 +200,21 @@ public class ChasisResource<T, E extends Serializable, R> {
      * entity. For edited record to work The following annotation must be
      * present on the relevant fields to be used to store changes;
      * <ul>
-     * <li> @{@link EditEntity} used to store the name of the entity being
+     * <li> @{link EditEntity} used to store the name of the entity being
      * updated preferably should be a string For example
      * <p>
-     * <code>@{@link EditEntity} <br> private {@link String}
+     * <code>@{link EditEntity} <br> private {link String}
      * recordEntity;</code></p>
      * </li>
-     * <li>@{@link EditDataWrapper} used to store changes in JSON format
-     * preferably should be a {@link String} For example
+     * <li>@{link EditDataWrapper} used to store changes in JSON format
+     * preferably should be a {link String} For example
      * <p>
-     * <code>@{@link EditDataWrapper}<br>private {@link String} data;</code></p>
+     * <code>@{link EditDataWrapper}<br>private {link String} data;</code></p>
      * </li>
-     * <li>@{@link EditEntityId} used to store entity id and you can use any
-     * data type that extends {@link Serializable} For example
+     * <li>@{link EditEntityId} used to store entity id and you can use any
+     * data type that extends {link Serializable} For example
      * <p>
-     * <code>@{@link EditEntityId}<br> private {@link Long} entityId; </code>
+     * <code>@{link EditEntityId}<br> private {link Long} entityId; </code>
      * </p>
      * </li>
      * </ul>
@@ -239,8 +224,8 @@ public class ChasisResource<T, E extends Serializable, R> {
      * are persisted to the entity directly without being stored in the edited
      * record entity
      *
-     * @param t entity containing new changes
-     * @return {@link ResponseEntity} with statuses:
+     * param t entity containing new changes
+     * return {link ResponseEntity} with statuses:
      * <ul>
      * <li>200 on success</li>
      * <li>404 if the entity doesn't exist in the database</li>
@@ -249,14 +234,14 @@ public class ChasisResource<T, E extends Serializable, R> {
      * <li>417 if the entity us pending approval actions or if changes were not
      * found on the current entity</li>
      * </ul>
-     * @throws IllegalAccessException if a field on the entity could not be
+     * throws IllegalAccessException if a field on the entity could not be
      * accessed
-     * @throws JsonProcessingException if changes could not be converted to json
+     * throws JsonProcessingException if changes could not be converted to json
      * string
-     * @throws
+     * throws
      * ExpectationFailed When
-     * editEntity does not have fields; @{@link EditEntity}, @{@link EditEntity}
-     * and @{@link EditEntityId}
+     * editEntity does not have fields; @{link EditEntity}, @{link EditEntity}
+     * and @{link EditEntityId}
      */
     @RequestMapping(method = RequestMethod.PUT)
     @ApiOperation(value = "Update record")
@@ -351,8 +336,8 @@ public class ChasisResource<T, E extends Serializable, R> {
      * trash directly (flagging .
      * <b>If intrash field doesn't exist the record is deleted permanently</b>
      *
-     * @param actions contains an array of entity id(s)
-     * @return {@link ResponseEntity} with statuses:
+     * param actions contains an array of entity id(s)
+     * return {link ResponseEntity} with statuses:
      * <ul>
      * <li>200 on success</li>
      * <li>207 if not all records could be deleted</li>
@@ -422,15 +407,15 @@ public class ChasisResource<T, E extends Serializable, R> {
      * Used to approve actions (create, update, delete, deactivate). Also
      * ensures only the checker can approve an action
      *
-     * @param actions containing entities id
-     * @return {@link ResponseEntity} with statuses:
+     * param actions containing entities id
+     * return {link ResponseEntity} with statuses:
      * <ul>
      * <li>200 on success</li>
      * <li>404 if the entity doesn't exist in the database</li>
      * <li>207 if some of the action could be approved successfuly. The data
      * fields contains more details on records that failed</li>
      * </ul>
-     * @throws
+     * throws
      * ExpectationFailed When
      * entity doesn't have action or actionStatus fields
      */
@@ -511,31 +496,13 @@ public class ChasisResource<T, E extends Serializable, R> {
         }
     }
 
-    /**
-     * Approve new records
-     *
-     * @param id
-     * @param entity
-     * @param notes
-     * @param nickName
-     * @throws ExpectationFailed
-     */
+    
     protected void processApproveNew(E id, T entity, String notes, String nickName) throws ExpectationFailed {
         loggerService.log("Done approving new  " + nickName + "",
                 entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
     }
 
-    /**
-     * Approve edit changes
-     *
-     * @param id ID of the entity being approved
-     * @param entity the entity to be merged with the changes
-     * @param notes approve notes for the audit trail
-     * @param nickName entity meaningful name
-     * @throws ExpectationFailed thrown when either fields annotated with
-     * @{@link ModifiableField} cannot be accessed or when data stored in edited
-     * entity cannot be mapped back to an entity
-     */
+    
     protected void processApproveChanges(E id, T entity, String notes, String nickName) throws ExpectationFailed {
         try {
             entity = supportRepo.mergeChanges(id, entity);
@@ -547,15 +514,7 @@ public class ChasisResource<T, E extends Serializable, R> {
                 entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
     }
 
-    /**
-     * Approve Deletion
-     *
-     * @param id
-     * @param entity
-     * @param notes
-     * @param nickName
-     * @throws ExpectationFailed
-     */
+    
     protected void processApproveDeletion(E id, T entity, String notes, String nickName) throws ExpectationFailed {
         PropertyAccessor accessor = PropertyAccessorFactory.forBeanPropertyAccess(entity);
         accessor.setPropertyValue("intrash", AppConstants.YES);
@@ -563,13 +522,7 @@ public class ChasisResource<T, E extends Serializable, R> {
                 entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
     }
 
-    /**
-     * @param id
-     * @param entity
-     * @param notes
-     * @param nickName
-     * @throws ExpectationFailed
-     */
+    
     protected void processConfirm(E id, T entity, String notes, String nickName) throws ExpectationFailed {
         loggerService.log("Done confirmation " + nickName + ".",
                 entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
@@ -579,15 +532,15 @@ public class ChasisResource<T, E extends Serializable, R> {
      * Used to decline actions (create, update, delete, deactivate). Ensures
      * only the checker can decline an action
      *
-     * @param actions
-     * @return {@link ResponseEntity} with statuses:
+     * param actions
+     * return with statuses:
      * <ul>
      * <li>200 on success</li>
      * <li>404 if the entity doesn't exist in the database</li>
      * <li>207 if some of the action could be approved successfuly. The data
      * fields contains more details on records that failed</li>
      * </ul>
-     * @throws
+     * throws
      * ExpectationFailed When
      * entity doesn't have action or actionStatus fields
      */
@@ -685,12 +638,12 @@ public class ChasisResource<T, E extends Serializable, R> {
     /**
      * Decline new records
      *
-     * @param id ID of the entity being declined
-     * @param entity the entity to be merged with the changes
-     * @param notes decline notes for the audit trail
-     * @param nickName entity meaningful name
-     * @throws ExpectationFailed thrown when either fields annotated with
-     * @{@link ModifiableField} cannot be accessed or when data stored in edited
+     * param id ID of the entity being declined
+     * param entity the entity to be merged with the changes
+     * param notes decline notes for the audit trail
+     * param nickName entity meaningful name
+     * throws ExpectationFailed thrown when either fields annotated with
+     * {link ModifiableField} cannot be accessed or when data stored in edited
      * entity cannot be mapped back to an entity
      */
     protected void processDeclineNew(E id, T entity, String notes, String nickName) throws ExpectationFailed {
@@ -701,12 +654,12 @@ public class ChasisResource<T, E extends Serializable, R> {
     /**
      * Decline edit changes. Clears temporal changes stored in the entity record
      *
-     * @param id ID of the entity being declined
-     * @param entity the entity to be merged with the changes
-     * @param notes approve notes for the audit trail
-     * @param nickName entity meaningful name
-     * @throws ExpectationFailed thrown when either fields annotated with
-     * @{@link ModifiableField} cannot be accessed or when data stored in edited
+     * param id ID of the entity being declined
+     * param entity the entity to be merged with the changes
+     * param notes approve notes for the audit trail
+     * param nickName entity meaningful name
+     * throws ExpectationFailed thrown when either fields annotated with
+     * @{link ModifiableField} cannot be accessed or when data stored in edited
      * entity cannot be mapped back to an entity
      */
     protected void processDeclineChanges(E id, T entity, String notes, String nickName) throws ExpectationFailed {
@@ -723,12 +676,12 @@ public class ChasisResource<T, E extends Serializable, R> {
     /**
      * Decline Deletion
      *
-     * @param id ID of the entity being declined
-     * @param entity the entity to be merged with the changes
-     * @param notes approve notes for the audit trail
-     * @param nickName entity meaningful name
-     * @throws ExpectationFailed thrown when either fields annotated with
-     * @{@link ModifiableField} cannot be accessed or when data stored in edited
+     * param id ID of the entity being declined
+     * param entity the entity to be merged with the changes
+     * param notes approve notes for the audit trail
+     * param nickName entity meaningful name
+     * throws ExpectationFailed thrown when either fields annotated with
+     * {link ModifiableField} cannot be accessed or when data stored in edited
      * entity cannot be mapped back to an entity
      */
     protected void processDeclineDeletion(E id, T entity, String notes, String nickName) throws ExpectationFailed {
@@ -737,11 +690,11 @@ public class ChasisResource<T, E extends Serializable, R> {
     }
 
     /**
-     * @param id
-     * @param entity
-     * @param notes
-     * @param nickName
-     * @throws ExpectationFailed
+     * param id
+     * param entity
+     * param notes
+     * param nickName
+     * throws ExpectationFailed
      */
     protected void processDeclineConfirmation(E id, T entity, String notes, String nickName) throws ExpectationFailed {
         loggerService.log("Declined ocnfirmation " + nickName + ".",
@@ -751,12 +704,12 @@ public class ChasisResource<T, E extends Serializable, R> {
     /**
      * Used to fetch entity updated changes
      *
-     * @param id entity id to be effected
-     * @return {@link ResponseEntity} with status 200 and a {@link List} of
+     * param id entity id to be effected
+     * return {link ResponseEntity} with status 200 and a {link List} of
      * changes (Returns an empty list if changes don't exist)
-     * @throws java.lang.IllegalAccessException if a field on the entity could
+     * throws java.lang.IllegalAccessException if a field on the entity could
      * not be accessed
-     * @throws java.io.IOException if stored changes could not be read
+     * throws java.io.IOException if stored changes could not be read
      */
     @RequestMapping(method = RequestMethod.GET, value = "/{id}/changes")
     @ApiOperation(value = "Fetch Record Changes")
@@ -768,14 +721,14 @@ public class ChasisResource<T, E extends Serializable, R> {
 
     /**
      * Used to validate unique fields in a given entity against existing records
-     * in the database. Unique fields are identified using @{@link Unique}
+     * in the database. Unique fields are identified using @{link Unique}
      * annotation.
      *
-     * @param t Entity to be validated
-     * @throws RuntimeException If the current field doesn't have an id field
-     * (Field annotated with @{@link Id})
-     * @throws GeneralBadRequest If unique validation fails on a field annotated
-     * with @{@link Unique} annotation
+     * param t Entity to be validated
+     * throws RuntimeException If the current field doesn't have an id field
+     * (Field annotated with @{link Id})
+     * throws GeneralBadRequest If unique validation fails on a field annotated
+     * with @{link Unique} annotation
      */
     private void validateUniqueFields(T t) throws GeneralBadRequest {
 
@@ -838,8 +791,8 @@ public class ChasisResource<T, E extends Serializable, R> {
     /**
      * Fetch entity excluding entities in trash
      *
-     * @param id
-     * @return
+     * param id
+     * return
      */
     public T fetchEntity(Serializable id) {
         Class clazz = this.genericClasses.get(0);//Shar.getGenericClasses(this.getClass()).get(0);
@@ -880,8 +833,8 @@ public class ChasisResource<T, E extends Serializable, R> {
      * <h4>Note</h4>
      * <ul>
      * <li>If needle parameter is present search will be done on fields
-     * annotated with @{@link Searchable} (Search is case insensitive)</li>
-     * <li>If fields annotated with @{@link Filter} exist the request will be
+     * annotated with @{link Searchable} (Search is case insensitive)</li>
+     * <li>If fields annotated with @{link Filter} exist the request will be
      * searched for parameters with similar name as the field name and if found
      * the results will be filtered using the filter. For example for field
      * <pre>@Filter private String name;</pre> expects the request name
@@ -890,11 +843,11 @@ public class ChasisResource<T, E extends Serializable, R> {
      * HH:mm:ss.SSS, dd/MM/yyyy HH:mm:ss)</li>
      * </ul>
      *
-     * @param pg used to sort and limit the result
-     * @param request HTTP Request used to get filter and search parameters.
-     * @return
-     * @throws ParseException if request param date cannot be casted to
-     * {@link Date}
+     * param pg used to sort and limit the result
+     * param request HTTP Request used to get filter and search parameters.
+     * return
+     * throws ParseException if request param date cannot be casted to
+     * {link Date}
      */
     @ApiOperation(value = "Fetch all Records", notes = "")
     @ApiImplicitParams({
@@ -1017,8 +970,8 @@ public class ChasisResource<T, E extends Serializable, R> {
     }
 
     /**
-     * @param dateString
-     * @return
+     * param dateString
+     * return
      */
     private Date tryParse(String dateString) {
         List<String> formatStrings = Arrays.asList(
