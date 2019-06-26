@@ -141,7 +141,7 @@
                     <localCheckout>true</localCheckout>
                     <pushChanges>false</pushChanges>
                     <mavenExecutorId>forked-path</mavenExecutorId>
-                    <arguments>-Dgpg.passphrase=KudeKude2018!</arguments>
+                    <arguments>-Dgpg.passphrase=**</arguments>
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -219,10 +219,6 @@
                                 <goals>
                                     <goal>sign</goal>
                                 </goals>
-                                <configuration>
-                                    <keyname>19D0421446A1F20A53D4BA9A8C203DCB9B58B477</keyname>
-                                    <passphrase>KudeKude2018!</passphrase>
-                                </configuration>
                             </execution>
                         </executions>
                     </plugin>
