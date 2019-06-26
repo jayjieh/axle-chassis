@@ -2,28 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b7d5820-f293-4db7-a9f9-1939292b5f9c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml.releaseBackup" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/release.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EditEntityId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EditEntityId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/TreeRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/TreeRoot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/ExpectationFailed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/ExpectationFailed.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/GeneralBadRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/GeneralBadRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringResourceChasis-1.2.4-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringResourceChasis-1.2.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/checkout" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ke/axle/chassis/ChasisResource$ExcludeProxiedFields.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ke/axle/chassis/ChasisResource$ExcludeProxiedFields.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ke/axle/chassis/ChasisResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ke/axle/chassis/ChasisResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ke/axle/chassis/exceptions/GeneralBadRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ke/axle/chassis/exceptions/GeneralBadRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ke/axle/chassis/utils/SharedMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ke/axle/chassis/utils/SharedMethods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ke/axle/chassis/utils/SupportRepository$DynamicMixIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ke/axle/chassis/utils/SupportRepository$DynamicMixIn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ke/axle/chassis/utils/SupportRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ke/axle/chassis/utils/SupportRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cm.projects.spring.resource.chasis.ChasisResourceTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.cm.projects.spring.resource.chasis.ChasisResourceTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cm/projects/spring/resource/chasis/EdittedRecord.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/cm/projects/spring/resource/chasis/EdittedRecord.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/release.properties" beforeDir="false" afterPath="$PROJECT_DIR$/release.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -95,8 +76,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="679">
-              <caret line="183" column="46" lean-forward="true" selection-start-line="183" selection-start-column="46" selection-end-line="184" selection-end-column="69" />
+            <state relative-caret-position="321">
+              <caret line="226" column="37" selection-start-line="226" selection-start-column="37" selection-end-line="226" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -171,11 +152,11 @@
         <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EditEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/Unique.java" />
         <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/NotFoundException.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EditEntityId.java" />
         <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/TreeRoot.java" />
         <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/ExpectationFailed.java" />
         <option value="$PROJECT_DIR$/src/main/java/ke/axle/chassis/exceptions/GeneralBadRequest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -222,7 +203,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -360,7 +341,7 @@
       <updated>1561461742971</updated>
       <workItem from="1561461744557" duration="5471000" />
       <workItem from="1561489753505" duration="3090000" />
-      <workItem from="1561529518274" duration="2303000" />
+      <workItem from="1561529518274" duration="3295000" />
     </task>
     <task id="LOCAL-00001" summary="Group ID Update">
       <created>1561463845702</created>
@@ -394,10 +375,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10864000" />
+    <option name="totallyTimeSpent" value="11856000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21215352" />
@@ -412,7 +393,7 @@
       <window_info id="Web" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.41928494" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -633,10 +614,81 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="679">
-          <caret line="183" column="46" lean-forward="true" selection-start-line="183" selection-start-column="46" selection-end-line="184" selection-end-column="69" />
+        <state relative-caret-position="321">
+          <caret line="226" column="37" selection-start-line="226" selection-start-column="37" selection-end-line="226" selection-end-column="37" />
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
