@@ -8,6 +8,36 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../UFS/ufs-webportal-api/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../UFS/ufs-webportal-api/src/main/java/ke/tra/ufs/webportal/resources/BankBranchesResources.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../UFS/ufs-webportal-api/src/main/java/ke/tra/ufs/webportal/resources/BanksResource.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../UFS/ufs-webportal-api/src/main/java/ke/tra/ufs/webportal/resources/CustomerOwnersResource.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../UFS/ufs-webportal-api/src/main/java/ke/tra/ufs/webportal/resources/CustomerResource.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../UFS/ufs-webportal-api/src/main/java/ke/tra/ufs/webportal/service/template/LoggerServiceTemplate.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/pom.xml">
           <value>
             <set />

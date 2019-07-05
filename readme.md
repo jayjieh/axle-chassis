@@ -109,4 +109,34 @@ Used to retrieve all entity records
 ##### Throws
 - **ParseException** - if request param date cannot be casted to **java.util.Date**
 
+##### Adding the library dependency to your Projects
+If your using maven
+``` java
+ <dependency>
+      <groupId>io.github.jayjieh</groupId>
+      <artifactId>SpringResourceChasis</artifactId>
+      <version>1.2.6</version>
+  </dependency>
+  ```
+  If your Using Gradle
+``` java
+  compile group: 'io.github.jayjieh', name: 'SpringResourceChasis', version: '1.2.6'
+```
+
+#### Extending it in your Controller 
+``` java
+@RestController
+@RequestMapping(value = "/demo")
+public class DemoController extends ChasisResource<Users, Long, Object> {
+
+      public DemoController(LoggerService loggerService, EntityManager entityManager) {
+           super(loggerService, entityManager);
+      }
+}
+```
+> - **Users**  - This is the example Entity Class mapping generated from your Database table
+> - **Long**   - Represents the Datatype for @Id variable in your entity
+> - **Object** - This can be replace with any entity that could be used manage Controllers update as described above in **Update Resource**
+
+
 
