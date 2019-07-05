@@ -38,6 +38,51 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../AxleChassisDemo/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../AxleChassisDemo/src/main/java/com/axle/chassisdemo/demo/config/ResourceServerConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../AxleChassisDemo/src/main/java/com/axle/chassisdemo/demo/config/WebConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../AxleChassisDemo/src/main/java/com/axle/chassisdemo/demo/controller/DemoController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../AxleChassisDemo/src/main/java/com/axle/chassisdemo/demo/entity/BaseDO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../AxleChassisDemo/src/main/java/com/axle/chassisdemo/demo/entity/DemoEdittedRecord.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../AxleChassisDemo/src/main/java/com/axle/chassisdemo/demo/entity/UsersDO.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../AxleChassisDemo/src/main/java/com/axle/chassisdemo/demo/service/LoggerServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../AxleChassisDemo/src/main/resources/application.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/pom.xml">
           <value>
             <set />

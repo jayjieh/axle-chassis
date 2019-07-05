@@ -109,7 +109,7 @@ Used to retrieve all entity records
 ##### Throws
 - **ParseException** - if request param date cannot be casted to **java.util.Date**
 
-##### Adding the library dependency to your Projects
+### Adding the library dependency to your Projects
 If your using maven
 ``` java
  <dependency>
@@ -123,7 +123,7 @@ If your using maven
   compile group: 'io.github.jayjieh', name: 'SpringResourceChasis', version: '1.2.6'
 ```
 
-#### Extending it in your Controller 
+### Extending it in your Controller 
 ``` java
 @RestController
 @RequestMapping(value = "/demo")
@@ -138,5 +138,7 @@ public class DemoController extends ChasisResource<Users, Long, Object> {
 > - **Long**   - Represents the Datatype for @Id variable in your entity
 > - **Object** - This can be replace with any entity that could be used manage Controllers update as described above in [**Update Resource**](https://github.com/jayjieh/axle-chassis#update-resource)
 
-
+### Demo 
+you can check a demo application showing how to integrate axle chassis into your project
+[Chassis Demo](https://github.com/jayjieh/axle-chassis-demo)
 
