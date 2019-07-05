@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b7d5820-f293-4db7-a9f9-1939292b5f9c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
@@ -76,9 +74,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SECOND">
-              <first_editor relative-caret-position="689">
-                <caret line="138" column="139" selection-start-line="138" selection-start-column="139" selection-end-line="138" selection-end-column="139" />
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="587">
+                <caret line="132" column="47" lean-forward="true" selection-start-line="132" selection-start-column="47" selection-end-line="132" selection-end-column="47" />
               </first_editor>
               <second_editor />
             </state>
@@ -346,7 +344,7 @@
       <workItem from="1561489753505" duration="3090000" />
       <workItem from="1561529518274" duration="5172000" />
       <workItem from="1561556373290" duration="1341000" />
-      <workItem from="1562308624021" duration="890000" />
+      <workItem from="1562308624021" duration="1228000" />
     </task>
     <task id="LOCAL-00001" summary="Group ID Update">
       <created>1561463845702</created>
@@ -383,14 +381,22 @@
       <option name="project" value="LOCAL" />
       <updated>1561538837927</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Read me Update">
+      <created>1562309674710</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1562309674710</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15964000" />
+    <option name="totallyTimeSpent" value="16302000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21215352" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -444,7 +450,8 @@
     <MESSAGE value="Javadoc Fix" />
     <MESSAGE value="Javadoc Update" />
     <MESSAGE value="Final Release" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final Release" />
+    <MESSAGE value="Read me Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Read me Update" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/utils/ErrorList.java">
@@ -621,9 +628,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SECOND">
-          <first_editor relative-caret-position="689">
-            <caret line="138" column="139" selection-start-line="138" selection-start-column="139" selection-end-line="138" selection-end-column="139" />
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="587">
+            <caret line="132" column="47" lean-forward="true" selection-start-line="132" selection-start-column="47" selection-end-line="132" selection-end-column="47" />
           </first_editor>
           <second_editor />
         </state>

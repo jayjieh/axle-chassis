@@ -136,7 +136,7 @@ public class DemoController extends ChasisResource<Users, Long, Object> {
 ```
 > - **Users**  - This is the example Entity Class mapping generated from your Database table
 > - **Long**   - Represents the Datatype for @Id variable in your entity
-> - **Object** - This can be replace with any entity that could be used manage Controllers update as described above in **Update Resource**
+> - **Object** - This can be replace with any entity that could be used manage Controllers update as described above in [**Update Resource**](https://github.com/jayjieh/axle-chassis#update-resource)
 
 
 
