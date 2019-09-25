@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b7d5820-f293-4db7-a9f9-1939292b5f9c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml.releaseBackup" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/release.properties" beforeDir="false" afterPath="$PROJECT_DIR$/release.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +100,7 @@
       <workItem from="1561529518274" duration="5172000" />
       <workItem from="1561556373290" duration="1341000" />
       <workItem from="1562308624021" duration="4170000" />
-      <workItem from="1569398665972" duration="1764000" />
+      <workItem from="1569398665972" duration="1814000" />
     </task>
     <task id="LOCAL-00001" summary="Group ID Update">
       <created>1561463845702</created>
@@ -167,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569399580279</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="removed properties">
+      <created>1569402156163</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1569402156163</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,7 +198,8 @@
     <MESSAGE value="Read me Update" />
     <MESSAGE value="Added sample link" />
     <MESSAGE value="Added Log to view when fetch by ID is performed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Log to view when fetch by ID is performed" />
+    <MESSAGE value="removed properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed properties" />
   </component>
   <component name="masterDetails">
     <states>
