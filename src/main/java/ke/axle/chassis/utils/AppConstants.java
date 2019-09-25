@@ -24,6 +24,7 @@ public class AppConstants {
     public static final String ACTIVITY_UPDATE = "Update";
     public static final String ACTIVITY_DELETE = "Deletion";
     public static final String ACTIVITY_APPROVE = "Approve";
+    public static final String ACTIVITY_VIEW = "View";
     public static final String ACTIVITY_DECLINE = "Decline";
     public static final String ACTIVITY_DEACTIVATE = "Deactivate";
     public static final String ACTIVITY_ACTIVATION = "Activation";

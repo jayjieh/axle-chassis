@@ -38,12 +38,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../AxleChassisDemo/README.md">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../AxleChassisDemo/pom.xml">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../AxleChassisDemo/src/main/java/com/axle/chassisdemo/demo/config/ResourceServerConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../AxleChassisDemo/src/main/java/com/axle/chassisdemo/demo/config/SwaggerConfig.java">
           <value>
             <set />
           </value>

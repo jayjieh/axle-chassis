@@ -50,12 +50,12 @@ import java.util.*;
  * Approve checker actions
  * Decline checker actions
  * Fetch, filter, search and paginate resources
- *
+ * <p>
  * param <T> action entity
  * param <E> id class
  * param <R> Edited entity
+ *
  * @author Cornelius M
- * @version 0.0.1
  * @author Owori Juma
  * @version 1.2.3
  */
@@ -120,7 +120,7 @@ public class ChasisResource<T, E extends Serializable, R> {
                 if (relEntity != null) {
                     for (Field f2 : relEntity.getClass().getDeclaredFields()) {
                         if (f2.isAnnotationPresent(Id.class)) {
-                            
+
                             Object id = accessor.getPropertyValue(f2.getName());
                             if (entityManager.find(relEntity.getClass(), id) == null) {
                                 NickName nickName = relEntity.getClass().getDeclaredAnnotation(NickName.class);
@@ -151,7 +151,7 @@ public class ChasisResource<T, E extends Serializable, R> {
             response.setMessage(ex.getMessage());
             return ResponseEntity.status(HttpStatus.CONFLICT).body(response);
         }
-        
+
         try {
             accessor.setPropertyValue("actionStatus", AppConstants.STATUS_UNAPPROVED);
         } catch (org.springframework.beans.NotWritablePropertyException ex) {
@@ -178,7 +178,7 @@ public class ChasisResource<T, E extends Serializable, R> {
 
     /**
      * Used to fetch entity by id
-     *
+     * <p>
      * param id Entity id
      * return {link ResponseEntity} with data field containing the entity
      * (data is null when entity could not be found) and status 200:
@@ -186,6 +186,8 @@ public class ChasisResource<T, E extends Serializable, R> {
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     @ApiOperation(value = "Fetch single record using record id")
     public ResponseEntity<ResponseWrapper<T>> getEntity(@PathVariable("id") E id) {
+        loggerService.log("Viewed Item with ID [" + id + "] deletion.",
+                this.genericClasses.get(0).getSimpleName(), id, AppConstants.ACTIVITY_VIEW, AppConstants.STATUS_COMPLETED, "");
         ResponseWrapper response = new ResponseWrapper();
         response.setData(this.fetchEntity(id));
         return ResponseEntity.ok(response);
@@ -198,10 +200,10 @@ public class ChasisResource<T, E extends Serializable, R> {
      * For created and updated records that have not been approved the changes
      * are persisted to the entity directly without being stored in the edited
      * record entity
-     *
+     * <p>
      * param t entity containing new changes
      * return {link ResponseEntity} with statuses:
-     *
+     * <p>
      * throws IllegalAccessException if a field on the entity could not be
      * accessed
      * throws JsonProcessingException if changes could not be converted to json
@@ -214,14 +216,14 @@ public class ChasisResource<T, E extends Serializable, R> {
     @RequestMapping(method = RequestMethod.PUT)
     @ApiOperation(value = "Update record")
     @ApiResponses(value = {
-        @ApiResponse(code = 404, message = "Record not found")
-        ,
+            @ApiResponse(code = 404, message = "Record not found")
+            ,
             @ApiResponse(code = 417, message = "Record has unapproved actions or if record has not been modified")
     })
     @Transactional
     public ResponseEntity<ResponseWrapper<T>> updateEntity(@RequestBody @Valid T t) throws IllegalAccessException, JsonProcessingException, ExpectationFailed {
         ResponseWrapper<T> response = new ResponseWrapper();
-        
+
         T dbT = this.fetchEntity((Serializable) SharedMethods.getEntityIdValue(t));
         if (dbT == null) {
             loggerService.log("Updating " + recordName + " failed due to record doesn't exist", t.getClass().getSimpleName(),
@@ -239,7 +241,7 @@ public class ChasisResource<T, E extends Serializable, R> {
             response.setMessage(ex.getMessage());
             return ResponseEntity.status(HttpStatus.CONFLICT).body(response);
         }
-        
+
         PropertyAccessor accessor = PropertyAccessorFactory.forBeanPropertyAccess(dbT);
         String actionStatus = null;
         String action = null;
@@ -262,13 +264,13 @@ public class ChasisResource<T, E extends Serializable, R> {
                 response.setMessage("Sorry record has Unapproved actions");
                 return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(response);
             }
-            
+
             if (!(AppConstants.STATUS_UNAPPROVED).equalsIgnoreCase(actionStatus)) {
                 accessor.setPropertyValue("action", AppConstants.ACTIVITY_UPDATE);
                 accessor.setPropertyValue("actionStatus", AppConstants.STATUS_UNAPPROVED);
             }
         }
-        
+
         List<String> changes;
         if (AppConstants.ACTIVITY_CREATE.equalsIgnoreCase(action) && AppConstants.STATUS_UNAPPROVED.equalsIgnoreCase(actionStatus)) {
             changes = supportRepo.fetchChanges(t, dbT);
@@ -286,15 +288,15 @@ public class ChasisResource<T, E extends Serializable, R> {
                 }
             }
         }
-        
+
         response.setData(t);
         loggerService.log("Updated " + recordName + " successfully. "
-                + String.join(",", changes),
+                        + String.join(",", changes),
                 t.getClass().getSimpleName(), SharedMethods.getEntityIdValue(t),
                 AppConstants.ACTIVITY_UPDATE, AppConstants.STATUS_COMPLETED, "");
-        
+
         return ResponseEntity.ok(response);
-        
+
     }
 
     /**
@@ -303,18 +305,17 @@ public class ChasisResource<T, E extends Serializable, R> {
      * If action and actionStatus fields don't exist the record is moved to
      * trash directly (flagging .
      * If intrash field doesn't exist the record is deleted permanently
-     *
+     * <p>
      * param actions contains an array of entity id(s)
      * return {link ResponseEntity} with statuses:
      * 200 on success
      * 207 if not all records could be deleted
      * 404 if the entity doesn't exist in the database<
-     *
      */
     @RequestMapping(method = RequestMethod.DELETE)
     @ApiOperation(value = "Delete record")
     @ApiResponses(value = {
-        @ApiResponse(code = 207, message = "Some records could not be processed successfully")
+            @ApiResponse(code = 207, message = "Some records could not be processed successfully")
     })
     @Transactional
     public ResponseEntity<ResponseWrapper> deleteEntity(@RequestBody @Valid ActionWrapper<E> actions) {
@@ -328,7 +329,7 @@ public class ChasisResource<T, E extends Serializable, R> {
                 errors.add(recordName + " with id " + id + " doesn't exist");
                 continue;
             }
-            
+
             PropertyAccessor accessor = PropertyAccessorFactory.forBeanPropertyAccess(t);
             try {
                 if ((accessor.getPropertyValue("actionStatus") != null) && accessor.getPropertyValue("actionStatus").toString().equalsIgnoreCase(AppConstants.STATUS_UNAPPROVED)) {
@@ -354,7 +355,7 @@ public class ChasisResource<T, E extends Serializable, R> {
                 }
             }
         }
-        
+
         if (errors.isEmpty()) {
             return ResponseEntity.ok(response);
         } else {
@@ -363,12 +364,12 @@ public class ChasisResource<T, E extends Serializable, R> {
             response.setMessage(AppConstants.CHECKER_GENERAL_ERROR);
             return ResponseEntity.status(HttpStatus.MULTI_STATUS).body(response);
         }
-        
+
     }
-    
+
     @ApiOperation(value = "Approve Record Actions")
     @ApiResponses(value = {
-        @ApiResponse(code = 207, message = "Some records could not be processed successfully")
+            @ApiResponse(code = 207, message = "Some records could not be processed successfully")
     })
     /**
      * Used to approve actions (create, update, delete, deactivate). Also
@@ -389,7 +390,7 @@ public class ChasisResource<T, E extends Serializable, R> {
     public ResponseEntity<ResponseWrapper> approveActions(@RequestBody @Valid ActionWrapper<E> actions) throws ExpectationFailed {
         ResponseWrapper response = new ResponseWrapper();
         List<String> errors = new ErrorList();
-        
+
         for (E id : actions.getIds()) {
             T t = this.fetchEntity(id);
             try {
@@ -399,7 +400,7 @@ public class ChasisResource<T, E extends Serializable, R> {
                     errors.add(recordName + " with id " + id + " doesn't exist");
                     continue;
                 }
-                
+
                 PropertyAccessor accessor = PropertyAccessorFactory.forBeanPropertyAccess(t);
                 String action;
                 String actionStatus;
@@ -419,7 +420,7 @@ public class ChasisResource<T, E extends Serializable, R> {
                 } catch (org.springframework.beans.NotWritablePropertyException ex) {
                     throw new ExpectationFailed("Sorry entity does not contain action and actionStatus fields");
                 }
-                
+
                 if (loggerService.isInitiator(this.genericClasses.get(0).getSimpleName(), id, action) && !action.equalsIgnoreCase("Unconfirmed")) {
                     errors.add("Sorry failed to approve " + recordName + ". Maker can't approve their own record ");
                     loggerService.log("Failed to approve " + recordName + ". Maker can't approve their own record",
@@ -461,13 +462,13 @@ public class ChasisResource<T, E extends Serializable, R> {
         }
     }
 
-    
+
     protected void processApproveNew(E id, T entity, String notes, String nickName) throws ExpectationFailed {
         loggerService.log("Done approving new  " + nickName + "",
                 entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
     }
 
-    
+
     protected void processApproveChanges(E id, T entity, String notes, String nickName) throws ExpectationFailed {
         try {
             entity = supportRepo.mergeChanges(id, entity);
@@ -479,7 +480,7 @@ public class ChasisResource<T, E extends Serializable, R> {
                 entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
     }
 
-    
+
     protected void processApproveDeletion(E id, T entity, String notes, String nickName) throws ExpectationFailed {
         PropertyAccessor accessor = PropertyAccessorFactory.forBeanPropertyAccess(entity);
         accessor.setPropertyValue("intrash", AppConstants.YES);
@@ -487,7 +488,7 @@ public class ChasisResource<T, E extends Serializable, R> {
                 entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
     }
 
-    
+
     protected void processConfirm(E id, T entity, String notes, String nickName) throws ExpectationFailed {
         loggerService.log("Done confirmation " + nickName + ".",
                 entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
@@ -496,7 +497,7 @@ public class ChasisResource<T, E extends Serializable, R> {
     /**
      * Used to decline actions (create, update, delete, deactivate). Ensures
      * only the checker can decline an action
-     *
+     * <p>
      * param actions
      * throws
      * ExpectationFailed When
@@ -506,14 +507,14 @@ public class ChasisResource<T, E extends Serializable, R> {
     @Transactional
     @ApiOperation(value = "Decline Record Actions")
     @ApiResponses(value = {
-        @ApiResponse(code = 207, message = "Some records could not be processed successfully")
+            @ApiResponse(code = 207, message = "Some records could not be processed successfully")
     })
     public ResponseEntity<ResponseWrapper> declineActions(@RequestBody @Valid ActionWrapper<E> actions) {
         ResponseWrapper response = new ResponseWrapper();
-        
+
         Class clazz = SharedMethods.getGenericClasses(this.getClass()).get(0);
         List<String> errors = new ErrorList();
-        
+
         for (E id : actions.getIds()) {
             T t = supportRepo.fetchEntity(id);
             try {
@@ -523,7 +524,7 @@ public class ChasisResource<T, E extends Serializable, R> {
                     errors.add(recordName + " with id " + id + " doesn't exist");
                     continue;
                 }
-                
+
                 PropertyAccessor accessor = PropertyAccessorFactory.forBeanPropertyAccess(t);
                 String action;
                 String actionStatus;
@@ -543,7 +544,7 @@ public class ChasisResource<T, E extends Serializable, R> {
                 } catch (org.springframework.beans.NotWritablePropertyException ex) {
                     throw new ExpectationFailed("Sorry entity does not contain action and actionStatus fields");
                 }
-                
+
                 if (loggerService.isInitiator(clazz.getSimpleName(), id, action) && !action.equalsIgnoreCase("Unconfirmed")) {
                     errors.add("Sorry maker can't approve their own record ");
                     loggerService.log("Failed to approve " + recordName + ". Maker can't approve their own record",
@@ -595,7 +596,7 @@ public class ChasisResource<T, E extends Serializable, R> {
 
     /**
      * Decline new records
-     *
+     * <p>
      * param id ID of the entity being declined
      * param entity the entity to be merged with the changes
      * param notes decline notes for the audit trail
@@ -611,12 +612,13 @@ public class ChasisResource<T, E extends Serializable, R> {
 
     /**
      * Decline edit changes. Clears temporal changes stored in the entity record
-     *
+     * <p>
      * param id ID of the entity being declined
      * param entity the entity to be merged with the changes
      * param notes approve notes for the audit trail
      * param nickName entity meaningful name
      * throws ExpectationFailed thrown when either fields annotated with
+     *
      * @{link ModifiableField} cannot be accessed or when data stored in edited
      * entity cannot be mapped back to an entity
      */
@@ -633,7 +635,7 @@ public class ChasisResource<T, E extends Serializable, R> {
 
     /**
      * Decline Deletion
-     *
+     * <p>
      * param id ID of the entity being declined
      * param entity the entity to be merged with the changes
      * param notes approve notes for the audit trail
@@ -661,7 +663,7 @@ public class ChasisResource<T, E extends Serializable, R> {
 
     /**
      * Used to fetch entity updated changes
-     *
+     * <p>
      * param id entity id to be effected
      * return {link ResponseEntity} with status 200 and a {link List} of
      * changes (Returns an empty list if changes don't exist)
@@ -681,7 +683,7 @@ public class ChasisResource<T, E extends Serializable, R> {
      * Used to validate unique fields in a given entity against existing records
      * in the database. Unique fields are identified using @{link Unique}
      * annotation.
-     *
+     * <p>
      * param t Entity to be validated
      * throws RuntimeException If the current field doesn't have an id field
      * (Field annotated with {link Id})
@@ -724,7 +726,7 @@ public class ChasisResource<T, E extends Serializable, R> {
             Root<T> root = criteriaQuery.from(clazz);
             Unique unique = field.getDeclaredAnnotation(Unique.class);
             Object value = accessor.getPropertyValue(field.getName());
-            
+
             if (hasIntrash) {
                 if (id == null) {
                     criteriaQuery.where(criteriaBuilder.and(criteriaBuilder.and(criteriaBuilder.equal(root.get(field.getName()), value),
@@ -748,7 +750,7 @@ public class ChasisResource<T, E extends Serializable, R> {
 
     /**
      * Fetch entity excluding entities in trash
-     *
+     * <p>
      * param id
      * return
      */
@@ -765,11 +767,11 @@ public class ChasisResource<T, E extends Serializable, R> {
                 hasIntrash = true;
             }
         }
-        
+
         if (fieldId == null) {
             throw new RuntimeException("Entity doesn't have an id field");
         }
-        
+
         CriteriaBuilder criteriaBuilder = this.entityManager.getCriteriaBuilder();
         CriteriaQuery<T> criteriaQuery = criteriaBuilder.createQuery(clazz);
         Root<T> root = criteriaQuery.from(clazz);
@@ -788,7 +790,7 @@ public class ChasisResource<T, E extends Serializable, R> {
 
     /**
      * Used to retrieve all entity records.
-     *
+     * <p>
      * param pg used to sort and limit the result
      * param request HTTP Request used to get filter and search parameters.
      * return
@@ -797,15 +799,15 @@ public class ChasisResource<T, E extends Serializable, R> {
      */
     @ApiOperation(value = "Fetch all Records", notes = "")
     @ApiImplicitParams({
-        @ApiImplicitParam(name = "size", dataType = "integer", required = false, value = "Pagination size e.g 20", paramType = "query")
-        ,
+            @ApiImplicitParam(name = "size", dataType = "integer", required = false, value = "Pagination size e.g 20", paramType = "query")
+            ,
             @ApiImplicitParam(name = "page", dataType = "integer", required = false, value = "Page number e.g 0", paramType = "query")
-        ,
+            ,
             @ApiImplicitParam(name = "sort", dataType = "string", required = false, value = "Field name e.g actionStatus,asc/desc", paramType = "query")
     })
     @GetMapping
     public ResponseEntity<ResponseWrapper<Page<T>>> findAll(Pageable pg, HttpServletRequest request) throws ParseException {
-        
+
         ResponseWrapper response = new ResponseWrapper();
         CriteriaBuilder criteriaBuilder = this.entityManager.getCriteriaBuilder();
         CriteriaQuery<T> criteriaQuery = criteriaBuilder.createQuery(this.genericClasses.get(0));
@@ -823,7 +825,7 @@ public class ChasisResource<T, E extends Serializable, R> {
                 searchPreds.add(criteriaBuilder.like(criteriaBuilder.upper(root.get(field.getName())),
                         "%" + request.getParameter("needle").toUpperCase() + "%"));
             }
-            
+
             if (field.isAnnotationPresent(Filter.class)) {//process filter attributes
                 if (field.getAnnotation(Filter.class).isDateRange() && request.getParameter("to") != null
                         && request.getParameter("from") != null) {//filter date range
@@ -835,7 +837,7 @@ public class ChasisResource<T, E extends Serializable, R> {
                     cal.setTime(from);
                     cal.add(Calendar.DAY_OF_WEEK, -1);
                     from = cal.getTime();
-                    
+
                     Date to = this.tryParse(request.getParameter("to"));
                     if (to == null) {
                         throw new ParseException("Failed to parse " + request.getParameter("to") + " to date", 0);
@@ -877,12 +879,12 @@ public class ChasisResource<T, E extends Serializable, R> {
             if (field.getName().equalsIgnoreCase("intrash")) {
                 filterPreds.add(criteriaBuilder.equal(root.get(field.getName()), AppConstants.NO));
             }
-            
+
             if (field.isAnnotationPresent(TreeRoot.class)) {
                 filterPreds.add(criteriaBuilder.isNull(root.get(field.getName())));
             }
         }
-        
+
         if (!filterPreds.isEmpty() && !searchPreds.isEmpty()) {
             criteriaQuery.where(criteriaBuilder.and(filterPreds.toArray(new Predicate[filterPreds.size()])),
                     criteriaBuilder.or(searchPreds.toArray(new Predicate[searchPreds.size()])));
@@ -898,19 +900,19 @@ public class ChasisResource<T, E extends Serializable, R> {
             criteriaQuery.where();
             countQuery.where();
         }
-        
+
         criteriaQuery.orderBy(ords);
         List<T> content = this.entityManager
                 .createQuery(criteriaQuery)
                 .setFirstResult((pg.getPageNumber() * pg.getPageSize()))
                 .setMaxResults(pg.getPageSize())
                 .getResultList();
-        
+
         countQuery.select(criteriaBuilder.count(countQuery.from(this.genericClasses.get(0))));
         Long total = this.entityManager.createQuery(countQuery).getSingleResult();
-        
+
         Page<T> page = new PageImpl<>(content, pg, total);
-        
+
         response.setData(page);
         return ResponseEntity.ok(response);
     }
@@ -930,12 +932,12 @@ public class ChasisResource<T, E extends Serializable, R> {
             } catch (ParseException e) {
             }
         }
-        
+
         return null;
     }
-    
+
     class ExcludeProxiedFields implements ExclusionStrategy {
-        
+
         @Override
         public boolean shouldSkipField(FieldAttributes fa) {
             return fa.getAnnotation(ManyToOne.class) != null
@@ -943,11 +945,11 @@ public class ChasisResource<T, E extends Serializable, R> {
                     || fa.getAnnotation(ManyToMany.class) != null
                     || fa.getAnnotation(OneToMany.class) != null;
         }
-        
+
         @Override
         public boolean shouldSkipClass(Class<?> type) {
             return false;
         }
     }
-    
+
 }
