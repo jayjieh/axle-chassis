@@ -93,12 +93,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/.gitignore">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/pom.xml">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/readme.md">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/release.properties">
           <value>
             <set />
           </value>
