@@ -390,6 +390,7 @@ public class ChasisResource<T, E extends Serializable, R> {
     public ResponseEntity<ResponseWrapper> approveActions(@RequestBody @Valid ActionWrapper<E> actions) throws ExpectationFailed {
         ResponseWrapper response = new ResponseWrapper();
         List<String> errors = new ErrorList();
+        List<E> success = new ArrayList<>();
 
         for (E id : actions.getIds()) {
             T t = this.fetchEntity(id);
@@ -448,15 +449,20 @@ public class ChasisResource<T, E extends Serializable, R> {
                     errors.add(recordName + " with id " + id + " doesn't have approve actions");
                 }
                 this.entityManager.merge(t);
+                success.add(id);
             } catch (ExpectationFailed ex) {
                 errors.add(ex.getMessage());
             }
         }
+        Map<String, Object> data = new HashMap<>();
+        data.put("success", success);
+        data.put("errors", errors);
+        response.setData(data);
+
         if (errors.isEmpty()) {
             return ResponseEntity.ok(response);
         } else {
             response.setCode(HttpStatus.MULTI_STATUS.value());
-            response.setData(errors);
             response.setMessage(AppConstants.CHECKER_GENERAL_ERROR);
             return ResponseEntity.status(HttpStatus.MULTI_STATUS).body(response);
         }
@@ -514,6 +520,8 @@ public class ChasisResource<T, E extends Serializable, R> {
 
         Class clazz = SharedMethods.getGenericClasses(this.getClass()).get(0);
         List<String> errors = new ErrorList();
+
+        List<E> success = new ArrayList<>();
 
         for (E id : actions.getIds()) {
             T t = supportRepo.fetchEntity(id);
@@ -580,15 +588,20 @@ public class ChasisResource<T, E extends Serializable, R> {
                     errors.add("Record doesn't have approve actions");
                 }
                 this.entityManager.merge(t);
+                success.add(id);
             } catch (ExpectationFailed ex) {
                 errors.add(ex.getMessage());
             }
         }
+        Map<String, Object> data = new HashMap<>();
+        data.put("success", success);
+        data.put("errors", errors);
+        response.setData(data);
+
         if (errors.isEmpty()) {
             return ResponseEntity.ok(response);
         } else {
             response.setCode(HttpStatus.MULTI_STATUS.value());
-            response.setData(errors);
             response.setMessage(AppConstants.CHECKER_GENERAL_ERROR);
             return ResponseEntity.status(HttpStatus.MULTI_STATUS).body(response);
         }
