@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b7d5820-f293-4db7-a9f9-1939292b5f9c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml.releaseBackup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/release.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +104,10 @@
       <workItem from="1561529518274" duration="5172000" />
       <workItem from="1561556373290" duration="1341000" />
       <workItem from="1562308624021" duration="4170000" />
-      <workItem from="1569398665972" duration="1814000" />
+      <workItem from="1569398665972" duration="3673000" />
+      <workItem from="1569413965955" duration="244000" />
+      <workItem from="1571578860917" duration="641000" />
+      <workItem from="1571900872183" duration="1182000" />
     </task>
     <task id="LOCAL-00001" summary="Group ID Update">
       <created>1561463845702</created>
@@ -172,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569402156163</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="removed .idea">
+      <created>1569402190239</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1569402190239</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,7 +197,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -199,7 +215,8 @@
     <MESSAGE value="Added sample link" />
     <MESSAGE value="Added Log to view when fetch by ID is performed" />
     <MESSAGE value="removed properties" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed properties" />
+    <MESSAGE value="removed .idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed .idea" />
   </component>
   <component name="masterDetails">
     <states>

@@ -8,6 +8,31 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../TMS/tmswebapi-bpr/src/main/java/ke/co/tra/ufs/tms/entities/ParBinConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../TMS/tmswebapi-bpr/src/main/java/ke/co/tra/ufs/tms/entities/ParBinProfile.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../TMS/tmswebapi-bpr/src/main/java/ke/co/tra/ufs/tms/entities/ParMenuGroup.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../TMS/tmswebapi-bpr/src/main/java/ke/co/tra/ufs/tms/entities/ParMenuItems.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../TMS/tmswebapi-bpr/src/main/java/ke/co/tra/ufs/tms/entities/ParMenuProfile.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../UFS/ufs-webportal-api/pom.xml">
           <value>
             <set />
@@ -214,6 +239,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/ke/axle/chassis/wrappers/ResponseWrapper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../tests/aaro_java_test/src/main/java/se/aaro/SortedMap.java">
           <value>
             <set />
           </value>

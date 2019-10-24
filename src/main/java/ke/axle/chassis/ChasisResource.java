@@ -807,7 +807,33 @@ public class ChasisResource<T, E extends Serializable, R> {
     })
     @GetMapping
     public ResponseEntity<ResponseWrapper<Page<T>>> findAll(Pageable pg, HttpServletRequest request) throws ParseException {
+        return fetchAllData(pg, request, AppConstants.NO);
+    }
 
+
+    /**
+     * Used to retrieve all deleted entity records.
+     * <p>
+     * param pg used to sort and limit the result
+     * param request HTTP Request used to get filter and search parameters.
+     * return
+     * throws ParseException if request param date cannot be casted to
+     * {link Date}
+     */
+    @ApiOperation(value = "Fetch all Deleted Records", notes = "")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "size", dataType = "integer", required = false, value = "Pagination size e.g 20", paramType = "query")
+            ,
+            @ApiImplicitParam(name = "page", dataType = "integer", required = false, value = "Page number e.g 0", paramType = "query")
+            ,
+            @ApiImplicitParam(name = "sort", dataType = "string", required = false, value = "Field name e.g actionStatus,asc/desc", paramType = "query")
+    })
+    @RequestMapping(value = "/deleted")
+    public ResponseEntity<ResponseWrapper<Page<T>>> findAllDeleted(Pageable pg, HttpServletRequest request) throws ParseException {
+        return fetchAllData(pg, request, AppConstants.YES);
+    }
+
+    private ResponseEntity<ResponseWrapper<Page<T>>> fetchAllData(Pageable pg, HttpServletRequest request, String intrash) throws ParseException {
         ResponseWrapper response = new ResponseWrapper();
         CriteriaBuilder criteriaBuilder = this.entityManager.getCriteriaBuilder();
         CriteriaQuery<T> criteriaQuery = criteriaBuilder.createQuery(this.genericClasses.get(0));
@@ -877,7 +903,7 @@ public class ChasisResource<T, E extends Serializable, R> {
             }
             //check if is intrash
             if (field.getName().equalsIgnoreCase("intrash")) {
-                filterPreds.add(criteriaBuilder.equal(root.get(field.getName()), AppConstants.NO));
+                filterPreds.add(criteriaBuilder.equal(root.get(field.getName()), intrash));
             }
 
             if (field.isAnnotationPresent(TreeRoot.class)) {
@@ -916,6 +942,7 @@ public class ChasisResource<T, E extends Serializable, R> {
         response.setData(page);
         return ResponseEntity.ok(response);
     }
+
 
     /**
      * param dateString
