@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b7d5820-f293-4db7-a9f9-1939292b5f9c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringResourceChasis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringResourceChasis.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/release.properties" beforeDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +37,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -58,12 +58,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectViewState">
-    <option name="compactDirectories" value="true" />
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -81,6 +75,18 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -101,8 +107,7 @@
       <workItem from="1569413965955" duration="244000" />
       <workItem from="1571578860917" duration="641000" />
       <workItem from="1571900872183" duration="2861000" />
-      <workItem from="1571915758176" duration="375000" />
-      <workItem from="1571922866956" duration="650000" />
+      <workItem from="1571915758176" duration="973000" />
     </task>
     <task id="LOCAL-00001" summary="Group ID Update">
       <created>1561463845702</created>
@@ -212,12 +217,6 @@
     <MESSAGE value="removed properties" />
     <MESSAGE value="removed .idea" />
     <option name="LAST_COMMIT_MESSAGE" value="removed .idea" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="808" y="408" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1571923019994">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="808" y="408" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1571923019994" />
   </component>
   <component name="masterDetails">
     <states>
