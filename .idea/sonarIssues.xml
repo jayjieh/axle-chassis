@@ -8,6 +8,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../TMS/tmsfrontend-bpr/src/app/layout/deleted-records/deleted-firmware/deleted-firmware.component.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../TMS/tmswebapi-bpr/src/main/java/ke/co/tra/ufs/tms/entities/ParBinConfig.java">
           <value>
             <set />
@@ -29,6 +34,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../../TMS/tmswebapi-bpr/src/main/java/ke/co/tra/ufs/tms/entities/ParMenuProfile.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../TMS/tmswebapi-bpr/src/main/java/ke/co/tra/ufs/tms/entities/UfsUsers.java">
           <value>
             <set />
           </value>

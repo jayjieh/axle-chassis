@@ -4,7 +4,6 @@
     <list default="true" id="5b7d5820-f293-4db7-a9f9-1939292b5f9c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml.releaseBackup" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/release.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java" afterDir="false" />
     </list>
@@ -107,7 +106,8 @@
       <workItem from="1569398665972" duration="3673000" />
       <workItem from="1569413965955" duration="244000" />
       <workItem from="1571578860917" duration="641000" />
-      <workItem from="1571900872183" duration="1182000" />
+      <workItem from="1571900872183" duration="2861000" />
+      <workItem from="1571915758176" duration="375000" />
     </task>
     <task id="LOCAL-00001" summary="Group ID Update">
       <created>1561463845702</created>

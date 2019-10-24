@@ -828,7 +828,7 @@ public class ChasisResource<T, E extends Serializable, R> {
             ,
             @ApiImplicitParam(name = "sort", dataType = "string", required = false, value = "Field name e.g actionStatus,asc/desc", paramType = "query")
     })
-    @RequestMapping(value = "/deleted")
+    @GetMapping(value = "/deleted")
     public ResponseEntity<ResponseWrapper<Page<T>>> findAllDeleted(Pageable pg, HttpServletRequest request) throws ParseException {
         return fetchAllData(pg, request, AppConstants.YES);
     }
