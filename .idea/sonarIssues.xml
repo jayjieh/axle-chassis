@@ -263,6 +263,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/com/cm/projects/spring/resource/chasis/ChasisResourceTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../tests/aaro_java_test/src/main/java/se/aaro/SortedMap.java">
           <value>
             <set />
