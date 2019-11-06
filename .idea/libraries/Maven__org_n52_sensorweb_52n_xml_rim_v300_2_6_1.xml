@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.n52.sensorweb:52n-xml-rim-v300:2.6.1">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/n52/sensorweb/52n-xml-rim-v300/2.6.1/52n-xml-rim-v300-2.6.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/n52/sensorweb/52n-xml-rim-v300/2.6.1/52n-xml-rim-v300-2.6.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/n52/sensorweb/52n-xml-rim-v300/2.6.1/52n-xml-rim-v300-2.6.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

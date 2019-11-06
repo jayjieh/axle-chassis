@@ -37,7 +37,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.io.IOException;
 import java.io.Serializable;
+import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Field;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -76,6 +79,8 @@ public class ChasisResource<T, E extends Serializable, R> {
      */
     protected SupportRepository<T, E> supportRepo;
 
+    private static final char[] hexArray = "0123456789ABCDEF".toCharArray();
+
     /**
      *
      */
@@ -112,8 +117,16 @@ public class ChasisResource<T, E extends Serializable, R> {
         //check if relational entities exists
         PropertyAccessor accessor = PropertyAccessorFactory.forBeanPropertyAccess(t);
         for (Field field : t.getClass().getDeclaredFields()) {
-            if (field.isAnnotationPresent(Id.class)) {
+            if (field.isAnnotationPresent(Id.class) && !field.isAnnotationPresent(ChasisUUID.class)) {
                 accessor.setPropertyValue(field.getName(), null);
+            }
+            if (field.isAnnotationPresent(Id.class) && field.isAnnotationPresent(ChasisUUID.class)) {
+                try {
+                    accessor.setPropertyValue(field.getName(), this.getUUID());
+                } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
+                    log.error("Error ", e.getCause());
+                    accessor.setPropertyValue(field.getName(), null);
+                }
             }
             if (field.isAnnotationPresent(ManyToOne.class)) {
                 Object relEntity = accessor.getPropertyValue(field.getName());
@@ -174,6 +187,22 @@ public class ChasisResource<T, E extends Serializable, R> {
         response.setData(t);
         response.setCode(201);
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
+    }
+
+    private String getUUID() throws NoSuchAlgorithmException, UnsupportedEncodingException {
+        MessageDigest salt = MessageDigest.getInstance("SHA-256");
+        salt.update(UUID.randomUUID().toString().getBytes("UTF-8"));
+        return bytesToHex(salt.digest());
+    }
+
+    private  String bytesToHex(byte[] bytes) {
+        char[] hexChars = new char[bytes.length * 2];
+        for (int j = 0; j < bytes.length; j++) {
+            int v = bytes[j] & 0xFF;
+            hexChars[j * 2] = hexArray[v >>> 4];
+            hexChars[j * 2 + 1] = hexArray[v & 0x0F];
+        }
+        return new String(hexChars);
     }
 
     /**

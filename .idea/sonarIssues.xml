@@ -158,6 +158,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/ChasisUUID.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EditChildEntity.java">
           <value>
             <set />
