@@ -43,6 +43,8 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.*;
 
 /**
@@ -195,14 +197,14 @@ public class ChasisResource<T, E extends Serializable, R> {
         return bytesToHex(salt.digest());
     }
 
-    private  String bytesToHex(byte[] bytes) {
+    private String bytesToHex(byte[] bytes) {
         char[] hexChars = new char[bytes.length * 2];
         for (int j = 0; j < bytes.length; j++) {
             int v = bytes[j] & 0xFF;
             hexChars[j * 2] = hexArray[v >>> 4];
             hexChars[j * 2 + 1] = hexArray[v & 0x0F];
         }
-        return new String(hexChars);
+        return new String(hexChars).toLowerCase();
     }
 
     /**
@@ -898,21 +900,26 @@ public class ChasisResource<T, E extends Serializable, R> {
                 if (field.getAnnotation(Filter.class).isDateRange() && request.getParameter("to") != null
                         && request.getParameter("from") != null) {//filter date range
 
-                    Date from = this.tryParse(request.getParameter("from"));
-                    if (from == null) {
+                    Date fromDate = this.tryParse(request.getParameter("from"));
+                    if (fromDate == null) {
                         throw new ParseException("Failed to parse " + request.getParameter("from") + " to date", 0);
                     }
-                    cal.setTime(from);
-                    cal.add(Calendar.DAY_OF_WEEK, -1);
-                    from = cal.getTime();
+                    cal.setTime(fromDate);
+                    fromDate = cal.getTime();
 
-                    Date to = this.tryParse(request.getParameter("to"));
-                    if (to == null) {
+                    LocalDateTime fromTime = fromDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime().withHour(0).withMinute(0).withSecond(0).withNano(0);
+                    Date from = Date.from(fromTime.atZone(ZoneId.systemDefault()).toInstant());
+
+                    Date toDate = this.tryParse(request.getParameter("to"));
+                    if (toDate == null) {
                         throw new ParseException("Failed to parse " + request.getParameter("to") + " to date", 0);
                     }
-                    cal.setTime(to);
-                    cal.add(Calendar.DAY_OF_WEEK, 1);
-                    to = cal.getTime();
+                    cal.setTime(toDate);
+                    toDate = cal.getTime();
+
+                    LocalDateTime toTime = toDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime().withHour(23).withMinute(59).withSecond(59).withNano(0);
+                    Date to = Date.from(toTime.atZone(ZoneId.systemDefault()).toInstant());
+
                     Predicate datePred = criteriaBuilder.between(root.get(field.getName()).as(Date.class), from, to);
                     filterPreds.add(datePred);
                 } else if (request.getParameter(field.getName()) != null && !request.getParameter(field.getName()).isEmpty()) {

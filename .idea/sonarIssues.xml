@@ -48,6 +48,66 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../UFS/tracomufs/src/app/layout/common-modules/businessunititem/manage/manage.component.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../UFS/tracomufs/src/app/layout/reports/audit/audit.component.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../UFS/tracomufs/src/app/layout/reports/audit/audit.component.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../UFS/tracomufs/src/app/layout/util/checker-actions/checker-actions.component.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../UFS/tracomufs/src/app/layout/util/checker-dialog/checker-dialog.component.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../UFS/tracomufs/src/app/layout/util/ufs-datatable/ufs-datatable.component.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../UFS/tracomufs/src/app/login/login.component.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../UFS/tracomufs/src/app/shared/services/http-steward.service.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../UFS/ufs-common-modules/logs/ufs-common-modules.log">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../UFS/ufs-common-modules/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../UFS/ufs-common-modules/src/main/java/ke/tracom/ufs/entities/UfsOrganizationUnits.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../UFS/ufs-common-modules/src/main/java/ke/tracom/ufs/services/template/BeanUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../UFS/ufs-webportal-api/pom.xml">
           <value>
             <set />
@@ -189,6 +249,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/ModifiableField.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/NextSuperValue.java">
           <value>
             <set />
           </value>
