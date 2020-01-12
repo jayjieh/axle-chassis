@@ -237,10 +237,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="ChasisUIID anotation added" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="565" y="29" key="CommitChangelistDialog2" timestamp="1578843166824">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="565" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1578843166824" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1576655992648">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1576655992648" />
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1578843176412">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1578843176412" />
   </component>
   <component name="masterDetails">
     <states>

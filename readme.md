@@ -120,7 +120,7 @@ If your using maven
   ```
   If your Using Gradle
 ``` java
-  compile group: 'io.github.jayjieh', name: 'SpringResourceChasis', version: '1.2.6'
+  compile group: 'io.github.jayjieh', name: 'SpringResourceChasis', version: '1.3.3'
 ```
 
 ### Extending it in your Controller 
