@@ -115,7 +115,7 @@ If your using maven
  <dependency>
       <groupId>io.github.jayjieh</groupId>
       <artifactId>SpringResourceChasis</artifactId>
-      <version>1.2.6</version>
+      <version>1.3.3</version>
   </dependency>
   ```
   If your Using Gradle
