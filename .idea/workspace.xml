@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b7d5820-f293-4db7-a9f9-1939292b5f9c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EntityName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/release.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -117,7 +119,11 @@
       <workItem from="1576825982367" duration="566000" />
       <workItem from="1576826756159" duration="530000" />
       <workItem from="1577084115265" duration="2899000" />
-      <workItem from="1578843099709" duration="47000" />
+      <workItem from="1578843099709" duration="923000" />
+      <workItem from="1581927288146" duration="682000" />
+      <workItem from="1582122365978" duration="661000" />
+      <workItem from="1582125484481" duration="235000" />
+      <workItem from="1585216114429" duration="4042000" />
     </task>
     <task id="LOCAL-00001" summary="Group ID Update">
       <created>1561463845702</created>
@@ -203,7 +209,21 @@
       <option name="project" value="LOCAL" />
       <updated>1573050358915</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Version Update">
+      <created>1578843168169</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1578843168169</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Version Update">
+      <created>1578843229995</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1578843229995</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,21 +254,26 @@
     <MESSAGE value="removed properties" />
     <MESSAGE value="removed .idea" />
     <MESSAGE value="ChasisUIID anotation added" />
-    <option name="LAST_COMMIT_MESSAGE" value="ChasisUIID anotation added" />
+    <MESSAGE value="Version Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version Update" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="565" y="29" key="CommitChangelistDialog2" timestamp="1578843166824">
+    <state x="640" y="248" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1585216125038">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="565" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1578843166824" />
+    <state x="640" y="248" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585216125038" />
+    <state x="565" y="29" key="CommitChangelistDialog2" timestamp="1578843229174">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="565" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1578843229174" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1576655992648">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1576655992648" />
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1578843176412">
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1578843231514">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1578843176412" />
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1578843231514" />
   </component>
   <component name="masterDetails">
     <states>

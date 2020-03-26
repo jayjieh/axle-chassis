@@ -48,6 +48,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../Tenacle/sms/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../UFS/tracomufs/src/app/layout/common-modules/businessunititem/manage/manage.component.ts">
           <value>
             <set />
@@ -239,6 +244,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EditEntityId.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EntityName.java">
           <value>
             <set />
           </value>

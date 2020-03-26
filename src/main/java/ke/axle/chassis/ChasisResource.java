@@ -183,7 +183,10 @@ public class ChasisResource<T, E extends Serializable, R> {
             log.debug("Field action on entity {} is not accessible skipping field", this.genericClasses.get(0));
         }
         entityManager.persist(t);
-        this.loggerService.log("Created " + recordName + " successfully",
+
+
+        String extra = this.getLogsExtraDescription(t);
+        this.loggerService.log("Created " + recordName + " successfully " + extra,
                 t.getClass().getSimpleName(), SharedMethods.getEntityIdValue(t),
                 AppConstants.ACTIVITY_CREATE, AppConstants.STATUS_COMPLETED, "");
         response.setData(t);
@@ -217,10 +220,13 @@ public class ChasisResource<T, E extends Serializable, R> {
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     @ApiOperation(value = "Fetch single record using record id")
     public ResponseEntity<ResponseWrapper<T>> getEntity(@PathVariable("id") E id) {
-        loggerService.log("Viewed Item with ID [" + id + "] deletion.",
+        T dbT = this.fetchEntity(id);
+        String extra = this.getLogsExtraDescription(dbT);
+
+        loggerService.log("Viewed " + recordName + extra,
                 this.genericClasses.get(0).getSimpleName(), id, AppConstants.ACTIVITY_VIEW, AppConstants.STATUS_COMPLETED, "");
         ResponseWrapper response = new ResponseWrapper();
-        response.setData(this.fetchEntity(id));
+        response.setData(dbT);
         return ResponseEntity.ok(response);
     }
 
@@ -320,8 +326,9 @@ public class ChasisResource<T, E extends Serializable, R> {
             }
         }
 
+        String extra = this.getLogsExtraDescription(t);
         response.setData(t);
-        loggerService.log("Updated " + recordName + " successfully. "
+        loggerService.log("Updated " + recordName + " successfully. " + extra
                         + String.join(",", changes),
                 t.getClass().getSimpleName(), SharedMethods.getEntityIdValue(t),
                 AppConstants.ACTIVITY_UPDATE, AppConstants.STATUS_COMPLETED, "");
@@ -371,7 +378,8 @@ public class ChasisResource<T, E extends Serializable, R> {
                     accessor.setPropertyValue("action", AppConstants.ACTIVITY_DELETE);
                     accessor.setPropertyValue("actionStatus", AppConstants.STATUS_UNAPPROVED);
 //                    this.entityManager.persist(t);
-                    loggerService.log("Deleted " + recordName + " successfully", this.genericClasses.get(0).getSimpleName(),
+                    String extra = this.getLogsExtraDescription(t);
+                    loggerService.log("Deleted " + recordName + " successfully." + extra, this.genericClasses.get(0).getSimpleName(),
                             id, AppConstants.ACTIVITY_DELETE, AppConstants.STATUS_COMPLETED, "");
                 }
             } catch (org.springframework.beans.NotWritablePropertyException e) {
@@ -501,7 +509,8 @@ public class ChasisResource<T, E extends Serializable, R> {
 
 
     protected void processApproveNew(E id, T entity, String notes, String nickName) throws ExpectationFailed {
-        loggerService.log("Done approving new  " + nickName + "",
+        String extra = this.getLogsExtraDescription(entity);
+        loggerService.log("Done approving new  " + nickName + " " + extra,
                 entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
     }
 
@@ -513,7 +522,8 @@ public class ChasisResource<T, E extends Serializable, R> {
             log.error(AppConstants.AUDIT_LOG, "Failed to approve record changes", ex);
             throw new ExpectationFailed("Failed to approve record changes please contact the administrator for more help");
         }
-        loggerService.log("Done approving " + nickName + " changes",
+        String extra = this.getLogsExtraDescription(entity);
+        loggerService.log("Done approving " + nickName + " changes " + extra,
                 entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
     }
 
@@ -521,13 +531,15 @@ public class ChasisResource<T, E extends Serializable, R> {
     protected void processApproveDeletion(E id, T entity, String notes, String nickName) throws ExpectationFailed {
         PropertyAccessor accessor = PropertyAccessorFactory.forBeanPropertyAccess(entity);
         accessor.setPropertyValue("intrash", AppConstants.YES);
-        loggerService.log("Done approving " + nickName + " deletion.",
+        String extra = this.getLogsExtraDescription(entity);
+        loggerService.log("Done approving " + nickName + " deletion " + extra,
                 entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
     }
 
 
     protected void processConfirm(E id, T entity, String notes, String nickName) throws ExpectationFailed {
-        loggerService.log("Done confirmation " + nickName + ".",
+        String extra = this.getLogsExtraDescription(entity);
+        loggerService.log("Done confirmation " + nickName + " " + extra,
                 entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
     }
 
@@ -650,7 +662,8 @@ public class ChasisResource<T, E extends Serializable, R> {
      * entity cannot be mapped back to an entity
      */
     protected void processDeclineNew(E id, T entity, String notes, String nickName) throws ExpectationFailed {
-        loggerService.log("Declined new " + nickName + "",
+        String extra = this.getLogsExtraDescription(entity);
+        loggerService.log("Declined new " + nickName + " " + extra,
                 entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
     }
 
@@ -673,7 +686,8 @@ public class ChasisResource<T, E extends Serializable, R> {
             log.error(AppConstants.AUDIT_LOG, "Failed to decline record changes", ex);
             throw new ExpectationFailed("Failed to decline record changes please contact the administrator for more help");
         }
-        loggerService.log("Done declining " + nickName + " changes",
+        String extra = this.getLogsExtraDescription(entity);
+        loggerService.log("Done declining " + nickName + " changes " + extra,
                 entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_UPDATE, AppConstants.STATUS_COMPLETED, notes);
     }
 
@@ -689,7 +703,8 @@ public class ChasisResource<T, E extends Serializable, R> {
      * entity cannot be mapped back to an entity
      */
     protected void processDeclineDeletion(E id, T entity, String notes, String nickName) throws ExpectationFailed {
-        loggerService.log("Done declining " + nickName + " deletion.",
+        String extra = this.getLogsExtraDescription(entity);
+        loggerService.log("Done declining " + nickName + " deletion " + extra,
                 entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
     }
 
@@ -701,7 +716,8 @@ public class ChasisResource<T, E extends Serializable, R> {
      * throws ExpectationFailed
      */
     protected void processDeclineConfirmation(E id, T entity, String notes, String nickName) throws ExpectationFailed {
-        loggerService.log("Declined ocnfirmation " + nickName + ".",
+        String extra = this.getLogsExtraDescription(entity);
+        loggerService.log("Declined Confirmation " + nickName + " " + extra,
                 entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
     }
 
@@ -990,6 +1006,20 @@ public class ChasisResource<T, E extends Serializable, R> {
 
         response.setData(page);
         return ResponseEntity.ok(response);
+    }
+
+    private String getLogsExtraDescription(T t) {
+        Object entityName = null;
+        String name = null;
+        PropertyAccessor accessor = PropertyAccessorFactory.forBeanPropertyAccess(t);
+        for (Field field : t.getClass().getDeclaredFields()) {
+            if (field.isAnnotationPresent(EntityName.class)) {
+                entityName = accessor.getPropertyValue(field.getName());
+                name = field.getName();
+                break;
+            }
+        }
+        return (entityName != null) ? " with " + name + " :" + entityName : "";
     }
 
 
