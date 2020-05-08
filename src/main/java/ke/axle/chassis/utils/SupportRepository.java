@@ -5,11 +5,6 @@
  */
 package ke.axle.chassis.utils;
 
-import ke.axle.chassis.annotations.EditDataWrapper;
-import ke.axle.chassis.annotations.EditEntity;
-import ke.axle.chassis.annotations.EditEntityId;
-import ke.axle.chassis.annotations.ModifiableField;
-import ke.axle.chassis.exceptions.ExpectationFailed;
 import com.fasterxml.jackson.annotation.JsonFilter;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -18,7 +13,23 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.ser.FilterProvider;
 import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;
 import com.fasterxml.jackson.databind.ser.impl.SimpleFilterProvider;
+import ke.axle.chassis.annotations.EditDataWrapper;
+import ke.axle.chassis.annotations.EditEntity;
+import ke.axle.chassis.annotations.EditEntityId;
+import ke.axle.chassis.annotations.ModifiableField;
+import ke.axle.chassis.exceptions.ExpectationFailed;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.BeanWrapper;
+import org.springframework.beans.BeanWrapperImpl;
+import org.springframework.beans.PropertyAccessor;
+import org.springframework.beans.PropertyAccessorFactory;
 
+import javax.persistence.EntityManager;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.criteria.*;
 import java.io.IOException;
 import java.io.Serializable;
 import java.lang.reflect.Field;
@@ -26,30 +37,18 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import javax.persistence.EntityManager;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaDelete;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
+
 //import javax.persistence.PersistenceContext;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.BeanWrapper;
-import org.springframework.beans.BeanWrapperImpl;
 //import org.springframework.stereotype.Component;
 
 /**
  * Used to handle update requests (persisting changes in the edited entity, fetching changes,
  * declining changes and updating entity with the changes from edited entity)
- *
+ * <p>
  * param <T> entity affected by the changes
  * param <E> edited entity used to store changes temporarily before approval
+ *
  * @author Cornelius M
- * @version 0.0.1
  * @author Owori Juma
  * @version 1.2.3
  */
@@ -78,7 +77,7 @@ public class SupportRepository<T, E> {
 
     /**
      * Used to instantiate the class
-     *
+     * <p>
      * param entityManager   entity manager to handle transactions
      * param entityMapping   entity mapping
      * param editedEnMapping edited entity mapping
@@ -123,6 +122,24 @@ public class SupportRepository<T, E> {
         }
 
         return changes;
+    }
+
+    public String getBeforeAndAfterValues(T oldEntity, T newEntity) {
+        String beforeValues = " Before : ";
+        PropertyAccessor oldAccessor = PropertyAccessorFactory.forBeanPropertyAccess(oldEntity);
+        for (Field field : oldEntity.getClass().getDeclaredFields()) {
+            if (field.isAnnotationPresent(ModifiableField.class)) {
+                beforeValues += field.getName() + " - " + oldAccessor.getPropertyValue(field.getName()) + " \n";
+            }
+        }
+        String afterValues = " After : ";
+        PropertyAccessor newAccessor = PropertyAccessorFactory.forBeanPropertyAccess(newEntity);
+        for (Field field : newEntity.getClass().getDeclaredFields()) {
+            if (field.isAnnotationPresent(ModifiableField.class)) {
+                afterValues += field.getName() + " - " + newAccessor.getPropertyValue(field.getName()) + " \n";
+            }
+        }
+        return beforeValues + " and " + afterValues;
     }
 
     private void updateChanges(Serializable index, T entity, T oldEntity, Class<E> editEntity) throws
@@ -180,7 +197,7 @@ public class SupportRepository<T, E> {
 
     /**
      * Used to fetch { List} of changes
-     *
+     * <p>
      * param newbean updated entity
      * param oldbean old entity
      * return a {link List} of {link String} changes
@@ -223,7 +240,7 @@ public class SupportRepository<T, E> {
 
     /**
      * Used to fetch { List} of changes
-     *
+     * <p>
      * param id entity id
      * param t  the old entity
      * return a {link List} of {link String} changes
@@ -287,7 +304,7 @@ public class SupportRepository<T, E> {
 
     /**
      * Fetch entity excluding entities in trash
-     *
+     * <p>
      * param id entity id
      * return persistent context entity
      */
@@ -385,7 +402,7 @@ public class SupportRepository<T, E> {
 
     /**
      * Update entity with changes from the new object
-     *
+     * <p>
      * param oldbean
      * param newbean
      * return updated bean
@@ -417,7 +434,7 @@ public class SupportRepository<T, E> {
 
     /**
      * Used to decline entity changes. It clears data from the EditEntity
-     *
+     * <p>
      * param id entity id
      * throws java.lang.IllegalAccessException if modified fields cannot be accessed
      */

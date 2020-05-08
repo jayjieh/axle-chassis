@@ -262,8 +262,9 @@ public class ChasisResource<T, E extends Serializable, R> {
         ResponseWrapper<T> response = new ResponseWrapper();
         String beforeAndAfter = "";
 
+
         T dbT = this.fetchEntity((Serializable) SharedMethods.getEntityIdValue(t));
-        beforeAndAfter += "Before Update Values: [" + dbT.toString() + "] \nAfter Values: [" + t.toString() + "]";
+        beforeAndAfter += supportRepo.getBeforeAndAfterValues(dbT, t);
         if (dbT == null) {
             loggerService.log("Updating " + recordName + " failed due to record doesn't exist", t.getClass().getSimpleName(),
                     null, AppConstants.ACTIVITY_CREATE, AppConstants.STATUS_FAILED, "");
