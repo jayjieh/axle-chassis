@@ -260,8 +260,10 @@ public class ChasisResource<T, E extends Serializable, R> {
     @Transactional
     public ResponseEntity<ResponseWrapper<T>> updateEntity(@RequestBody @Valid T t) throws IllegalAccessException, JsonProcessingException, ExpectationFailed {
         ResponseWrapper<T> response = new ResponseWrapper();
+        String beforeAndAfter = "";
 
         T dbT = this.fetchEntity((Serializable) SharedMethods.getEntityIdValue(t));
+        beforeAndAfter += "Before Update Values: [" + dbT.toString() + "] \nAfter Values: [" + t.toString() + "]";
         if (dbT == null) {
             loggerService.log("Updating " + recordName + " failed due to record doesn't exist", t.getClass().getSimpleName(),
                     null, AppConstants.ACTIVITY_CREATE, AppConstants.STATUS_FAILED, "");
@@ -328,13 +330,15 @@ public class ChasisResource<T, E extends Serializable, R> {
 
         String extra = this.getLogsExtraDescription(t);
         response.setData(t);
+
+        String notes = " Data Changes: " + beforeAndAfter;
+
         loggerService.log("Updated " + recordName + " successfully. " + extra
-                        + String.join(",", changes),
+                        + String.join(",", changes) + beforeAndAfter,
                 t.getClass().getSimpleName(), SharedMethods.getEntityIdValue(t),
-                AppConstants.ACTIVITY_UPDATE, AppConstants.STATUS_COMPLETED, "");
+                AppConstants.ACTIVITY_UPDATE, AppConstants.STATUS_COMPLETED, notes);
 
         return ResponseEntity.ok(response);
-
     }
 
     /**
@@ -517,6 +521,8 @@ public class ChasisResource<T, E extends Serializable, R> {
 
     protected void processApproveChanges(E id, T entity, String notes, String nickName) throws ExpectationFailed {
         try {
+            List<String> changes = supportRepo.fetchChanges(id, this.fetchEntity(id));
+            notes += " Data Changes: " + String.join(",", changes);
             entity = supportRepo.mergeChanges(id, entity);
         } catch (IOException | IllegalArgumentException | IllegalAccessException ex) {
             log.error(AppConstants.AUDIT_LOG, "Failed to approve record changes", ex);
@@ -734,7 +740,7 @@ public class ChasisResource<T, E extends Serializable, R> {
     @RequestMapping(method = RequestMethod.GET, value = "/{id}/changes")
     @ApiOperation(value = "Fetch Record Changes")
     public ResponseEntity<ResponseWrapper<List<String>>> fetchChanges(@PathVariable("id") E id) throws IllegalAccessException, IOException {
-        ResponseWrapper<List<String>> response = new ResponseWrapper();
+        ResponseWrapper<List<String>> response = new ResponseWrapper<>();
         response.setData(supportRepo.fetchChanges(id, this.fetchEntity(id)));
         return ResponseEntity.ok(response);
     }

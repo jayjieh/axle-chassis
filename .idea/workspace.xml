@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b7d5820-f293-4db7-a9f9-1939292b5f9c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/EntityName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringResourceChasis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringResourceChasis.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,11 +30,6 @@
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
     <option name="enabledProfiles">
       <list>
         <option value="release-sign-artifacts" />
@@ -51,7 +45,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -59,7 +52,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../TMS/tmsgateway" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -71,18 +64,6 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -123,7 +104,17 @@
       <workItem from="1581927288146" duration="682000" />
       <workItem from="1582122365978" duration="661000" />
       <workItem from="1582125484481" duration="235000" />
-      <workItem from="1585216114429" duration="4042000" />
+      <workItem from="1585216114429" duration="4558000" />
+      <workItem from="1585314530865" duration="1237000" />
+      <workItem from="1588657113864" duration="154000" />
+      <workItem from="1588657901549" duration="615000" />
+      <workItem from="1588668507650" duration="3289000" />
+      <workItem from="1588736051965" duration="577000" />
+      <workItem from="1588799055121" duration="26000" />
+      <workItem from="1588799122732" duration="581000" />
+      <workItem from="1588858504431" duration="1571000" />
+      <workItem from="1588910727791" duration="599000" />
+      <workItem from="1588932411053" duration="486000" />
     </task>
     <task id="LOCAL-00001" summary="Group ID Update">
       <created>1561463845702</created>
@@ -227,20 +218,19 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -262,18 +252,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="248" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585216125038" />
-    <state x="565" y="29" key="CommitChangelistDialog2" timestamp="1578843229174">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1588885349688">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="565" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1578843229174" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1576655992648">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1576655992648" />
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1578843231514">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1578843231514" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588885349688" />
   </component>
   <component name="masterDetails">
     <states>
