@@ -335,7 +335,7 @@ public class ChasisResource<T, E extends Serializable, R> {
         String notes = " Data Changes: " + beforeAndAfter;
 
         loggerService.log("Updated " + recordName + " successfully. " + extra
-                        + String.join(",", changes) + beforeAndAfter,
+                        + String.join(",", changes) + ". Detail Changes: " + beforeAndAfter,
                 t.getClass().getSimpleName(), SharedMethods.getEntityIdValue(t),
                 AppConstants.ACTIVITY_UPDATE, AppConstants.STATUS_COMPLETED, "");
 
