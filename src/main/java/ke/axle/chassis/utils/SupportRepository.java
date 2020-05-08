@@ -125,21 +125,21 @@ public class SupportRepository<T, E> {
     }
 
     public String getBeforeAndAfterValues(T oldEntity, T newEntity) {
-        String beforeValues = " Before : ";
+        String beforeValues = "Before : [";
         PropertyAccessor oldAccessor = PropertyAccessorFactory.forBeanPropertyAccess(oldEntity);
         for (Field field : oldEntity.getClass().getDeclaredFields()) {
             if (field.isAnnotationPresent(ModifiableField.class)) {
-                beforeValues += field.getName() + " - " + oldAccessor.getPropertyValue(field.getName()) + " \n";
+                beforeValues += field.getName() + " - " + oldAccessor.getPropertyValue(field.getName()) + ", ";
             }
         }
-        String afterValues = " After : ";
+        String afterValues = "After : [";
         PropertyAccessor newAccessor = PropertyAccessorFactory.forBeanPropertyAccess(newEntity);
         for (Field field : newEntity.getClass().getDeclaredFields()) {
             if (field.isAnnotationPresent(ModifiableField.class)) {
-                afterValues += field.getName() + " - " + newAccessor.getPropertyValue(field.getName()) + " \n";
+                afterValues += field.getName() + " - " + newAccessor.getPropertyValue(field.getName()) + ", ";
             }
         }
-        return beforeValues + " and " + afterValues;
+        return beforeValues + "] | " + afterValues + "]";
     }
 
     private void updateChanges(Serializable index, T entity, T oldEntity, Class<E> editEntity) throws
