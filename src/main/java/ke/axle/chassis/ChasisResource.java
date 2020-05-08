@@ -337,7 +337,7 @@ public class ChasisResource<T, E extends Serializable, R> {
         loggerService.log("Updated " + recordName + " successfully. " + extra
                         + String.join(",", changes) + beforeAndAfter,
                 t.getClass().getSimpleName(), SharedMethods.getEntityIdValue(t),
-                AppConstants.ACTIVITY_UPDATE, AppConstants.STATUS_COMPLETED, notes);
+                AppConstants.ACTIVITY_UPDATE, AppConstants.STATUS_COMPLETED, "");
 
         return ResponseEntity.ok(response);
     }
