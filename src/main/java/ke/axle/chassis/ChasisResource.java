@@ -1018,6 +1018,9 @@ public class ChasisResource<T, E extends Serializable, R> {
     private String getLogsExtraDescription(T t) {
         Object entityName = null;
         String name = null;
+
+        if (t == null) return "";
+
         PropertyAccessor accessor = PropertyAccessorFactory.forBeanPropertyAccess(t);
         for (Field field : t.getClass().getDeclaredFields()) {
             if (field.isAnnotationPresent(EntityName.class)) {
