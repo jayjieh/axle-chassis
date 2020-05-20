@@ -129,7 +129,9 @@ public class SupportRepository<T, E> {
         PropertyAccessor oldAccessor = PropertyAccessorFactory.forBeanPropertyAccess(oldEntity);
         for (Field field : oldEntity.getClass().getDeclaredFields()) {
             if (field.isAnnotationPresent(ModifiableField.class)) {
-                beforeValues += field.getName() + " - " + oldAccessor.getPropertyValue(field.getName()) + ", ";
+                if (oldAccessor.getPropertyValue(field.getName()) != null) {
+                    beforeValues += field.getName() + " - " + oldAccessor.getPropertyValue(field.getName()) + ", ";
+                }
             }
         }
         String afterValues = "After : [";
@@ -139,7 +141,7 @@ public class SupportRepository<T, E> {
                 afterValues += field.getName() + " - " + newAccessor.getPropertyValue(field.getName()) + ", ";
             }
         }
-        return beforeValues + "] | " + afterValues + "]";
+        return beforeValues + "] \n" + afterValues + "]";
     }
 
     private void updateChanges(Serializable index, T entity, T oldEntity, Class<E> editEntity) throws
