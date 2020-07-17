@@ -230,47 +230,24 @@ public class SupportRepository<T, E> {
                         Class entityName = null;
                         boolean isModifiableChild = false;
                         boolean isModifiableConstant = false;
-                        ModifiableChildEntityField modifiableChildEntityField = null;
-                        //check if the field has child entity to use as before and after value
+                        ModifiableChildEntityField mdf = null;
                         if (field.isAnnotationPresent(ModifiableChildEntityField.class)) {
-                            modifiableChildEntityField = field.getAnnotation(ModifiableChildEntityField.class);
-                            entityName = (modifiableChildEntityField == null) ? null : modifiableChildEntityField.entityName();
-                            isModifiableConstant = (modifiableChildEntityField != null) ? modifiableChildEntityField.modifiableType().equals(ModifiableFieldType.CONSTANT) : false;
+                            mdf = field.getAnnotation(ModifiableChildEntityField.class);
+                            entityName = (mdf == null) ? null : mdf.entityName();
+                            isModifiableConstant = (mdf != null) ? mdf.modifiableType().equals(ModifiableFieldType.CONSTANT) : false;
                             isModifiableChild = true;
                         }
 
                         if (_oldValue == null) {
                             if (isModifiableChild) {
                                 if (!isModifiableConstant) {
-                                    if (field.getType().getSimpleName().equals("List")) {
-                                        List<String> changedValues = new ArrayList<>();
-                                        List ls = (List) _newValue;
-                                        Class finalEntityName = entityName;
-                                        ls.stream().filter(val -> finalEntityName != null).forEach(val -> {
-                                            String resp = this.getModifiableChildValues(finalEntityName, val);
-                                            if (!StringUtils.isEmpty(resp)) {
-                                                changedValues.add(this.getModifiableChildValues(finalEntityName, val));
-                                            }
-                                        });
-                                        _newValue = (changedValues.size() > 0) ? String.join(",", changedValues) : _newValue;
-                                    } else if (field.getType().getSimpleName().equals("Set")) {
-                                        List<String> changedValues = new ArrayList<>();
-                                        Set ls = (Set) _newValue;
-                                        Class finalEntityName = entityName;
-                                        ls.forEach(val -> {
-                                            if (finalEntityName != null) {
-                                                String resp = this.getModifiableChildValues(finalEntityName, val);
-                                                if (!StringUtils.isEmpty(resp)) {
-                                                    changedValues.add(this.getModifiableChildValues(finalEntityName, val));
-                                                }
-                                            }
-                                        });
-                                        _newValue = (changedValues.size() > 0) ? String.join(",", changedValues) : _newValue;
+                                    if (field.getType().getSimpleName().equals("List") || field.getType().getSimpleName().equals("Set")) {
+                                        _newValue = getChangeItems(entityName, _newValue);
                                     } else {
                                         _newValue = (entityName != null) ? this.getModifiableChildValues(entityName, _newValue) : _newValue;
                                     }
                                 } else {
-                                    _newValue = this.getConstantValue(modifiableChildEntityField, _newValue);
+                                    _newValue = this.getConstantValue(mdf, _newValue);
                                 }
                             }
                             changes.add("Assigned " + _newValue + " to " + SharedMethods.splitCamelString(field.getName()));
@@ -279,66 +256,18 @@ public class SupportRepository<T, E> {
                                 log.warn("Has a Modifiable child");
                                 if (!isModifiableConstant) {
                                     log.warn("Has a Modifiable child with a Query Type");
-                                    if (field.getType().getSimpleName().equals("List")) {
-                                        // for new Values
-                                        List<String> changedValuesn = new ArrayList<>();
-                                        List lsn = (List) _newValue;
-                                        Class finalEntityName = entityName;
-                                        lsn.forEach(val -> {
-                                            if (finalEntityName != null) {
-                                                String resp = this.getModifiableChildValues(finalEntityName, val);
-                                                if (!StringUtils.isEmpty(resp)) {
-                                                    changedValuesn.add(this.getModifiableChildValues(finalEntityName, val));
-                                                }
-                                            }
-                                        });
-                                        _newValue = (changedValuesn.size() > 0) ? String.join(",", changedValuesn) : _newValue;
+                                    if (field.getType().getSimpleName().equals("List") || field.getType().getSimpleName().equals("Set")) {
+                                        _newValue = getChangeItems(entityName, _newValue);
+                                        _oldValue = getChangeItems(entityName, _oldValue);
 
-                                        List<String> changedValueso = new ArrayList<>();
-                                        List lso = (List) _oldValue;
-                                        lso.forEach(val -> {
-                                            if (finalEntityName != null) {
-                                                String resp = this.getModifiableChildValues(finalEntityName, val);
-                                                if (!StringUtils.isEmpty(resp)) {
-                                                    changedValueso.add(this.getModifiableChildValues(finalEntityName, val));
-                                                }
-                                            }
-                                        });
-                                        _oldValue = (changedValueso.size() > 0) ? String.join(",", changedValueso) : _oldValue;
-
-                                    } else if (field.getType().getSimpleName().equals("Set")) {
-                                        List<String> changedValuesn = new ArrayList<>();
-                                        Set lsn = (Set) _newValue;
-                                        Class finalEntityName = entityName;
-                                        lsn.forEach(val -> {
-                                            if (finalEntityName != null) {
-                                                String resp = this.getModifiableChildValues(finalEntityName, val);
-                                                if (!StringUtils.isEmpty(resp)) {
-                                                    changedValuesn.add(this.getModifiableChildValues(finalEntityName, val));
-                                                }
-                                            }
-                                        });
-                                        _newValue = (changedValuesn.size() > 0) ? String.join(",", changedValuesn) : _newValue;
-
-                                        List<String> changedValueso = new ArrayList<>();
-                                        Set lso = (Set) _oldValue;
-                                        lso.forEach(val -> {
-                                            if (finalEntityName != null) {
-                                                String resp = this.getModifiableChildValues(finalEntityName, val);
-                                                if (!StringUtils.isEmpty(resp)) {
-                                                    changedValueso.add(this.getModifiableChildValues(finalEntityName, val));
-                                                }
-                                            }
-                                        });
-                                        _oldValue = (changedValueso.size() > 0) ? String.join(",", changedValueso) : _oldValue;
                                     } else {
                                         _oldValue = (!this.getModifiableChildValues(entityName, _oldValue).equals("")) ? this.getModifiableChildValues(entityName, _oldValue) : _oldValue;
                                         _newValue = (!this.getModifiableChildValues(entityName, _newValue).equals("")) ? this.getModifiableChildValues(entityName, _newValue) : _newValue;
                                     }
                                 } else {
                                     log.warn("Has a Modifiable child with a Constant Type");
-                                    _oldValue = (!this.getConstantValue(modifiableChildEntityField, _oldValue).equals("")) ? this.getConstantValue(modifiableChildEntityField, _oldValue) : _oldValue;
-                                    _newValue = (!this.getConstantValue(modifiableChildEntityField, _newValue).equals("")) ? this.getConstantValue(modifiableChildEntityField, _newValue) : _newValue;
+                                    _oldValue = (!this.getConstantValue(mdf, _oldValue).equals("")) ? this.getConstantValue(mdf, _oldValue) : _oldValue;
+                                    _newValue = (!this.getConstantValue(mdf, _newValue).equals("")) ? this.getConstantValue(mdf, _newValue) : _newValue;
                                 }
                             }
                             changes.add(SharedMethods.splitCamelString(field.getName())
@@ -410,6 +339,18 @@ public class SupportRepository<T, E> {
         return (!StringUtils.isEmpty(fieldName)) ? (String) wrapper.getPropertyValue(fieldName) : (String) newValue;
     }
 
+    private Object getChangeItems(Class entityName, Object _value) {
+        List<String> changes = new ArrayList<>();
+        List ls = (List) _value;
+        ls.stream().filter(val -> entityName != null).forEach(val -> {
+            String resp = this.getModifiableChildValues(entityName, val);
+            if (!org.apache.commons.lang3.StringUtils.isEmpty(resp)) {
+                changes.add(this.getModifiableChildValues(entityName, val));
+            }
+        });
+
+        return (changes.size() > 0) ? String.join(",", changes) : _value;
+    }
 
     /**
      * Used to fetch { List} of changes
