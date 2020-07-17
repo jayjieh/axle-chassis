@@ -8,6 +8,11 @@
             <set />
           </value>
         </entry>
+        <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../TMS/tmsfrontend-bpr/src/app/layout/deleted-records/deleted-firmware/deleted-firmware.component.ts">
           <value>
             <set />
@@ -258,7 +263,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/ModifiableChildEntityField.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/ModifiableField.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/ModifiableQueryField.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/ModifieableChildEntityField.java">
           <value>
             <set />
           </value>
@@ -284,6 +304,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/Unique.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/ke/axle/chassis/enums/ModifiableFieldType.java">
           <value>
             <set />
           </value>
@@ -333,12 +358,62 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/ke/axle/chassis/wrappers/ConstantsWrapper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/ke/axle/chassis/wrappers/ResponseWrapper.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/test/java/com/cm/projects/spring/resource/chasis/ChasisResourceTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../tests/T24Tests/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../tests/T24Tests/src/main/java/org/t24test/ModifiableFieldType.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../tests/T24Tests/src/main/java/org/t24test/TestGenerics.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../tests/T24Tests/src/main/java/org/t24test/annotations/ModifiableChildEntityField.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../tests/T24Tests/src/main/java/org/t24test/entities/DemoEntity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../tests/T24Tests/src/main/java/org/t24test/entities/Rwandese.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../tests/T24Tests/src/main/java/org/t24test/enums/ModifiableFieldType.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../tests/T24Tests/src/main/java/org/t24test/models/ConstantsWrapper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../tests/T24Tests/src/main/java/org/t24test/proc/ProcessData.java">
           <value>
             <set />
           </value>

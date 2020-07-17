@@ -7,23 +7,24 @@ package ke.axle.chassis.utils;
 
 import com.fasterxml.jackson.annotation.JsonFilter;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.ser.FilterProvider;
 import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;
 import com.fasterxml.jackson.databind.ser.impl.SimpleFilterProvider;
-import ke.axle.chassis.annotations.EditDataWrapper;
-import ke.axle.chassis.annotations.EditEntity;
-import ke.axle.chassis.annotations.EditEntityId;
-import ke.axle.chassis.annotations.ModifiableField;
+import ke.axle.chassis.annotations.*;
+import ke.axle.chassis.enums.ModifiableFieldType;
 import ke.axle.chassis.exceptions.ExpectationFailed;
+import ke.axle.chassis.wrappers.ConstantsWrapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanWrapper;
 import org.springframework.beans.BeanWrapperImpl;
 import org.springframework.beans.PropertyAccessor;
 import org.springframework.beans.PropertyAccessorFactory;
+import org.springframework.util.StringUtils;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Id;
@@ -33,10 +34,7 @@ import javax.persistence.criteria.*;
 import java.io.IOException;
 import java.io.Serializable;
 import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 //import javax.persistence.PersistenceContext;
 //import org.springframework.stereotype.Component;
@@ -224,12 +222,125 @@ public class SupportRepository<T, E> {
                 Object _newValue = field.get(oldbean);
                 Object _oldValue = field.get(newbean);
 
+
                 if (_newValue != _oldValue) {
                     if ((_newValue != null && !_newValue.equals(_oldValue))
                             || (_oldValue != null && !_oldValue.equals(_newValue))) {
+
+                        Class entityName = null;
+                        boolean isModifiableChild = false;
+                        boolean isModifiableConstant = false;
+                        ModifiableChildEntityField modifiableChildEntityField = null;
+                        //check if the field has child entity to use as before and after value
+                        if (field.isAnnotationPresent(ModifiableChildEntityField.class)) {
+                            modifiableChildEntityField = field.getAnnotation(ModifiableChildEntityField.class);
+                            entityName = (modifiableChildEntityField == null) ? null : modifiableChildEntityField.entityName();
+                            isModifiableConstant = (modifiableChildEntityField != null) ? modifiableChildEntityField.modifiableType().equals(ModifiableFieldType.CONSTANT) : false;
+                            isModifiableChild = true;
+                        }
+
                         if (_oldValue == null) {
+                            if (isModifiableChild) {
+                                if (!isModifiableConstant) {
+                                    if (field.getType().getSimpleName().equals("List")) {
+                                        List<String> changedValues = new ArrayList<>();
+                                        List ls = (List) _newValue;
+                                        Class finalEntityName = entityName;
+                                        ls.stream().filter(val -> finalEntityName != null).forEach(val -> {
+                                            String resp = this.getModifiableChildValues(finalEntityName, val);
+                                            if (!StringUtils.isEmpty(resp)) {
+                                                changedValues.add(this.getModifiableChildValues(finalEntityName, val));
+                                            }
+                                        });
+                                        _newValue = (changedValues.size() > 0) ? String.join(",", changedValues) : _newValue;
+                                    } else if (field.getType().getSimpleName().equals("Set")) {
+                                        List<String> changedValues = new ArrayList<>();
+                                        Set ls = (Set) _newValue;
+                                        Class finalEntityName = entityName;
+                                        ls.forEach(val -> {
+                                            if (finalEntityName != null) {
+                                                String resp = this.getModifiableChildValues(finalEntityName, val);
+                                                if (!StringUtils.isEmpty(resp)) {
+                                                    changedValues.add(this.getModifiableChildValues(finalEntityName, val));
+                                                }
+                                            }
+                                        });
+                                        _newValue = (changedValues.size() > 0) ? String.join(",", changedValues) : _newValue;
+                                    } else {
+                                        _newValue = (entityName != null) ? this.getModifiableChildValues(entityName, _newValue) : _newValue;
+                                    }
+                                } else {
+                                    _newValue = this.getConstantValue(modifiableChildEntityField, _newValue);
+                                }
+                            }
                             changes.add("Assigned " + _newValue + " to " + SharedMethods.splitCamelString(field.getName()));
                         } else {
+                            if (isModifiableChild) {
+                                log.warn("Has a Modifiable child");
+                                if (!isModifiableConstant) {
+                                    log.warn("Has a Modifiable child with a Query Type");
+                                    if (field.getType().getSimpleName().equals("List")) {
+                                        // for new Values
+                                        List<String> changedValuesn = new ArrayList<>();
+                                        List lsn = (List) _newValue;
+                                        Class finalEntityName = entityName;
+                                        lsn.forEach(val -> {
+                                            if (finalEntityName != null) {
+                                                String resp = this.getModifiableChildValues(finalEntityName, val);
+                                                if (!StringUtils.isEmpty(resp)) {
+                                                    changedValuesn.add(this.getModifiableChildValues(finalEntityName, val));
+                                                }
+                                            }
+                                        });
+                                        _newValue = (changedValuesn.size() > 0) ? String.join(",", changedValuesn) : _newValue;
+
+                                        List<String> changedValueso = new ArrayList<>();
+                                        List lso = (List) _oldValue;
+                                        lso.forEach(val -> {
+                                            if (finalEntityName != null) {
+                                                String resp = this.getModifiableChildValues(finalEntityName, val);
+                                                if (!StringUtils.isEmpty(resp)) {
+                                                    changedValueso.add(this.getModifiableChildValues(finalEntityName, val));
+                                                }
+                                            }
+                                        });
+                                        _oldValue = (changedValueso.size() > 0) ? String.join(",", changedValueso) : _oldValue;
+
+                                    } else if (field.getType().getSimpleName().equals("Set")) {
+                                        List<String> changedValuesn = new ArrayList<>();
+                                        Set lsn = (Set) _newValue;
+                                        Class finalEntityName = entityName;
+                                        lsn.forEach(val -> {
+                                            if (finalEntityName != null) {
+                                                String resp = this.getModifiableChildValues(finalEntityName, val);
+                                                if (!StringUtils.isEmpty(resp)) {
+                                                    changedValuesn.add(this.getModifiableChildValues(finalEntityName, val));
+                                                }
+                                            }
+                                        });
+                                        _newValue = (changedValuesn.size() > 0) ? String.join(",", changedValuesn) : _newValue;
+
+                                        List<String> changedValueso = new ArrayList<>();
+                                        Set lso = (Set) _oldValue;
+                                        lso.forEach(val -> {
+                                            if (finalEntityName != null) {
+                                                String resp = this.getModifiableChildValues(finalEntityName, val);
+                                                if (!StringUtils.isEmpty(resp)) {
+                                                    changedValueso.add(this.getModifiableChildValues(finalEntityName, val));
+                                                }
+                                            }
+                                        });
+                                        _oldValue = (changedValueso.size() > 0) ? String.join(",", changedValueso) : _oldValue;
+                                    } else {
+                                        _oldValue = (!this.getModifiableChildValues(entityName, _oldValue).equals("")) ? this.getModifiableChildValues(entityName, _oldValue) : _oldValue;
+                                        _newValue = (!this.getModifiableChildValues(entityName, _newValue).equals("")) ? this.getModifiableChildValues(entityName, _newValue) : _newValue;
+                                    }
+                                } else {
+                                    log.warn("Has a Modifiable child with a Constant Type");
+                                    _oldValue = (!this.getConstantValue(modifiableChildEntityField, _oldValue).equals("")) ? this.getConstantValue(modifiableChildEntityField, _oldValue) : _oldValue;
+                                    _newValue = (!this.getConstantValue(modifiableChildEntityField, _newValue).equals("")) ? this.getConstantValue(modifiableChildEntityField, _newValue) : _newValue;
+                                }
+                            }
                             changes.add(SharedMethods.splitCamelString(field.getName())
                                     + " changed from " + _oldValue + " to " + _newValue);
                         }
@@ -239,6 +350,66 @@ public class SupportRepository<T, E> {
         }
         return changes;
     }
+
+    private String getConstantValue(ModifiableChildEntityField mce, Object oldValue) {
+        String changes = "";
+        String contVals = mce.constantsValue();
+        ObjectMapper obj = new ObjectMapper();
+        try {
+            TypeReference<List<ConstantsWrapper>> typeRef = new TypeReference<List<ConstantsWrapper>>() {
+            };
+            List<ConstantsWrapper> wrapper = obj.readValue(contVals, typeRef);
+            Optional<ConstantsWrapper> constants = wrapper.stream().filter(x -> x.getKey().equals(oldValue.toString())).findAny(); //wrapper.stream().filter(x -> x.getKey().equals(oldValue)).findFirst();
+            if (constants.isPresent()) {
+                changes = constants.get().getValue();
+            }
+
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+
+        return changes;
+    }
+
+
+    private String getModifiableChildValues(Class entityName, Object newValue) {
+        String changes = "";
+
+        if (newValue == null) {
+            log.warn("Failed to find entity with id {} returning a List of empty changes", newValue);
+            return changes;
+        }
+
+        CriteriaQuery<E> c = this.builder.createQuery(entityName);
+        Root criteriaRoot = c.from(entityName);
+        Predicate[] preds = new Predicate[1];
+        String fieldName = "";
+        for (Field field : entityName.getDeclaredFields()) {
+            if (field.isAnnotationPresent(Id.class)) {
+                preds[0] = this.builder.equal(criteriaRoot.get(field.getName()), newValue);
+            }
+            if (field.isAnnotationPresent(ModifiableQueryField.class)) {
+                fieldName = field.getName();
+            }
+        }
+        c.where(preds);
+        E e;
+
+        try {
+            e = (E) this.entityManager.createQuery(c).getSingleResult();
+        } catch (javax.persistence.NoResultException ex) {
+            log.warn("Failed to find changes on returning a list of empty changes");
+            return changes;
+        }
+        if (e == null) {
+            log.warn("Failed to find changes on edited entity {} returning a list of empty changes", e);
+            return changes;
+        }
+
+        BeanWrapper wrapper = new BeanWrapperImpl(e);
+        return (!StringUtils.isEmpty(fieldName)) ? (String) wrapper.getPropertyValue(fieldName) : (String) newValue;
+    }
+
 
     /**
      * Used to fetch { List} of changes
