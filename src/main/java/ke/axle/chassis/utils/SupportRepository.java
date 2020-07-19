@@ -242,12 +242,12 @@ public class SupportRepository<T, E> {
                             if (isModifiableChild) {
                                 if (!isModifiableConstant) {
                                     if (field.getType().getSimpleName().equals("List") || field.getType().getSimpleName().equals("Set")) {
-                                        _newValue = getChangeItems(entityName, _newValue);
+                                        _newValue = fetchChangeItems(entityName, _newValue);
                                     } else {
-                                        _newValue = (entityName != null) ? this.getModifiableChildValues(entityName, _newValue) : _newValue;
+                                        _newValue = (entityName != null) ? this.fetchModifiableChildValues(entityName, _newValue) : _newValue;
                                     }
                                 } else {
-                                    _newValue = this.getConstantValue(mdf, _newValue);
+                                    _newValue = this.fetchConstantValue(mdf, _newValue);
                                 }
                             }
                             changes.add("Assigned " + _newValue + " to " + SharedMethods.splitCamelString(field.getName()));
@@ -257,17 +257,17 @@ public class SupportRepository<T, E> {
                                 if (!isModifiableConstant) {
                                     log.warn("Has a Modifiable child with a Query Type");
                                     if (field.getType().getSimpleName().equals("List") || field.getType().getSimpleName().equals("Set")) {
-                                        _newValue = getChangeItems(entityName, _newValue);
-                                        _oldValue = getChangeItems(entityName, _oldValue);
+                                        _newValue = fetchChangeItems(entityName, _newValue);
+                                        _oldValue = fetchChangeItems(entityName, _oldValue);
 
                                     } else {
-                                        _oldValue = (!this.getModifiableChildValues(entityName, _oldValue).equals("")) ? this.getModifiableChildValues(entityName, _oldValue) : _oldValue;
-                                        _newValue = (!this.getModifiableChildValues(entityName, _newValue).equals("")) ? this.getModifiableChildValues(entityName, _newValue) : _newValue;
+                                        _oldValue = (!this.fetchModifiableChildValues(entityName, _oldValue).equals("")) ? this.fetchModifiableChildValues(entityName, _oldValue) : _oldValue;
+                                        _newValue = (!this.fetchModifiableChildValues(entityName, _newValue).equals("")) ? this.fetchModifiableChildValues(entityName, _newValue) : _newValue;
                                     }
                                 } else {
                                     log.warn("Has a Modifiable child with a Constant Type");
-                                    _oldValue = (!this.getConstantValue(mdf, _oldValue).equals("")) ? this.getConstantValue(mdf, _oldValue) : _oldValue;
-                                    _newValue = (!this.getConstantValue(mdf, _newValue).equals("")) ? this.getConstantValue(mdf, _newValue) : _newValue;
+                                    _oldValue = (!this.fetchConstantValue(mdf, _oldValue).equals("")) ? this.fetchConstantValue(mdf, _oldValue) : _oldValue;
+                                    _newValue = (!this.fetchConstantValue(mdf, _newValue).equals("")) ? this.fetchConstantValue(mdf, _newValue) : _newValue;
                                 }
                             }
                             changes.add(SharedMethods.splitCamelString(field.getName())
@@ -280,7 +280,7 @@ public class SupportRepository<T, E> {
         return changes;
     }
 
-    private String getConstantValue(ModifiableChildEntityField mce, Object oldValue) {
+    private String fetchConstantValue(ModifiableChildEntityField mce, Object oldValue) {
         String changes = "";
         String contVals = mce.constantsValue();
         ObjectMapper obj = new ObjectMapper();
@@ -301,26 +301,43 @@ public class SupportRepository<T, E> {
     }
 
 
-    private String getModifiableChildValues(Class entityName, Object newValue) {
+    private String fetchModifiableChildValues(Class entityName, Object newValue) {
         String changes = "";
+        String idField = "";
+        String fieldName = "";
+        boolean hasId = false;
+        boolean hasModifiable = false;
 
         if (newValue == null) {
             log.warn("Failed to find entity with id {} returning a List of empty changes", newValue);
             return changes;
         }
 
+        PropertyAccessor accessor = PropertyAccessorFactory.forBeanPropertyAccess(entityName);
+        for (Field field : entityName.getDeclaredFields()) {
+            if (field.isAnnotationPresent(Id.class)) {
+                idField = field.getName();
+                hasId = true;
+            }
+            if (field.isAnnotationPresent(ModifiableQueryField.class)) {
+                ModifiableQueryField mqf = field.getAnnotation(ModifiableQueryField.class);
+                if (mqf.isChained()) {
+                    this.fetchModifiableChildValues(mqf.entityName(), accessor.getPropertyValue(field.getName()));
+                    break;
+                }
+                fieldName = field.getName();
+                hasModifiable = true;
+            }
+        }
+
+        if (!hasId || !hasModifiable) {
+            return changes;
+        }
+
         CriteriaQuery<E> c = this.builder.createQuery(entityName);
         Root criteriaRoot = c.from(entityName);
         Predicate[] preds = new Predicate[1];
-        String fieldName = "";
-        for (Field field : entityName.getDeclaredFields()) {
-            if (field.isAnnotationPresent(Id.class)) {
-                preds[0] = this.builder.equal(criteriaRoot.get(field.getName()), newValue);
-            }
-            if (field.isAnnotationPresent(ModifiableQueryField.class)) {
-                fieldName = field.getName();
-            }
-        }
+        preds[0] = this.builder.equal(criteriaRoot.get(idField), newValue);
         c.where(preds);
         E e;
 
@@ -339,13 +356,13 @@ public class SupportRepository<T, E> {
         return (!StringUtils.isEmpty(fieldName)) ? (String) wrapper.getPropertyValue(fieldName) : (String) newValue;
     }
 
-    private Object getChangeItems(Class entityName, Object _value) {
+    private Object fetchChangeItems(Class entityName, Object _value) {
         List<String> changes = new ArrayList<>();
         List ls = (List) _value;
         ls.stream().filter(val -> entityName != null).forEach(val -> {
-            String resp = this.getModifiableChildValues(entityName, val);
-            if (!org.apache.commons.lang3.StringUtils.isEmpty(resp)) {
-                changes.add(this.getModifiableChildValues(entityName, val));
+            String resp = this.fetchModifiableChildValues(entityName, val);
+            if (!StringUtils.isEmpty(resp)) {
+                changes.add(this.fetchModifiableChildValues(entityName, val));
             }
         });
 

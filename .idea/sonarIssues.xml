@@ -378,6 +378,26 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../mpesa/api/src/main/java/ke/jbr/backend/api/annotations/IdMap.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../mpesa/api/src/main/java/ke/jbr/backend/api/entities/Confirmation.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../mpesa/api/src/main/java/ke/jbr/backend/api/repository/DynamicCrudDao.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../mpesa/api/src/main/java/ke/jbr/backend/api/repository/impl/DynamicCrudDaoImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../tests/T24Tests/pom.xml">
           <value>
             <set />

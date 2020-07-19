@@ -7,10 +7,14 @@ import java.lang.annotation.Target;
 
 /**
  * Used to mark fields that can be used to query child entity
+ *
  * @author Owori Juma
  * @version 1.4.1
  */
 @Target(value = {ElementType.METHOD, ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ModifiableQueryField {
+    public boolean isChained() default false;
+
+    public Class<?> entityName() default Void.class;
 }
