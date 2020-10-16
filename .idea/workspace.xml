@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -19,14 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b7d5820-f293-4db7-a9f9-1939292b5f9c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
+    <list default="true" id="5b7d5820-f293-4db7-a9f9-1939292b5f9c" name="Default Changelist" comment="Added chained query">
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/ModifiableQueryField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/annotations/ModifiableQueryField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/utils/SupportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/utils/SupportRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringResourceChasis-1.4.1-javadoc.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringResourceChasis-1.4.1-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringResourceChasis-1.4.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/apidocs/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/allclasses-index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/apidocs/allclasses.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/allclasses.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/apidocs/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/allpackages-index.html" afterDir="false" />
@@ -107,6 +106,7 @@
       <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/package-summary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/package-tree.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/member-search-index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/apidocs/member-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/member-search-index.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/apidocs/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/overview-summary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/apidocs/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/overview-tree.html" afterDir="false" />
@@ -114,6 +114,7 @@
       <change beforePath="$PROJECT_DIR$/target/apidocs/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/serialized-form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/apidocs/type-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/type-search-index.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/checkout" beforeDir="false" afterPath="$PROJECT_DIR$/target/checkout" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ke/axle/chassis/annotations/ModifiableQueryField.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ke/axle/chassis/annotations/ModifiableQueryField.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ke/axle/chassis/utils/SupportRepository$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ke/axle/chassis/utils/SupportRepository$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ke/axle/chassis/utils/SupportRepository$DynamicMixIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ke/axle/chassis/utils/SupportRepository$DynamicMixIn.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ke/axle/chassis/utils/SupportRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ke/axle/chassis/utils/SupportRepository.class" afterDir="false" />
@@ -142,7 +143,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
+  <component name="JupyterTrust" id="0ca0d6bb-8f16-4c70-a77d-25629854478a" />
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.2\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
     <option name="enabledProfiles">
       <list>
         <option value="release-sign-artifacts" />
@@ -165,7 +172,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../TMS/tmsgateway" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -177,7 +184,9 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -236,7 +245,8 @@
       <workItem from="1594885870422" duration="21135000" />
       <workItem from="1594969514137" duration="3490000" />
       <workItem from="1594984851132" duration="2814000" />
-      <workItem from="1595123123314" duration="2724000" />
+      <workItem from="1595123123314" duration="2947000" />
+      <workItem from="1602839660046" duration="471000" />
     </task>
     <task id="LOCAL-00001" summary="Group ID Update">
       <created>1561463845702</created>
@@ -336,11 +346,18 @@
       <option name="project" value="LOCAL" />
       <updated>1578843229995</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added chained query">
+      <created>1595125922753</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1595125922753</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -367,7 +384,8 @@
     <MESSAGE value="removed .idea" />
     <MESSAGE value="ChasisUIID anotation added" />
     <MESSAGE value="Version Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version Update" />
+    <MESSAGE value="Added chained query" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added chained query" />
   </component>
   <component name="WindowStateProjectService">
     <state x="765" y="196" key="#com.intellij.ide.util.MemberChooser" timestamp="1594917039359">
@@ -398,10 +416,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1876" height="257" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594977107892" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1594977080656">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1595125937302">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1594977080656" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1595125937302" />
     <state x="616" y="173" width="672" height="676" key="search.everywhere.popup" timestamp="1594897452183">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
