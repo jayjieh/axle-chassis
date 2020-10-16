@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.jayjieh</groupId>
     <artifactId>SpringResourceChasis</artifactId>
-    <version>1.4.4-SNAPSHOT</version>
+    <version>1.4.4</version>
     <packaging>jar</packaging>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -120,7 +120,7 @@
         <connection>scm:git:git://github.com/jayjieh/axle-chassis.git</connection>
         <developerConnection>scm:git:git@github.com/jayjieh/axle-chassis.git</developerConnection>
         <url>https://github.com/jayjieh/axle-chassis.git</url>
-        <tag>\</tag>
+        <tag>SpringResourceChasis-1.4.4</tag>
     </scm>
 
     <build>
