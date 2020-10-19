@@ -491,6 +491,10 @@ public class ChasisResource<T, E extends Serializable, R> {
                         && actionStatus.equalsIgnoreCase(AppConstants.STATUS_UNAPPROVED)) {
                     this.processDeactivate(id, t, actions.getNotes(), recordName);
                     accessor.setPropertyValue("actionStatus", AppConstants.STATUS_APPROVED);
+                } else if (action.equalsIgnoreCase(AppConstants.ACTIVITY_ACTIVATION)
+                        && actionStatus.equalsIgnoreCase(AppConstants.STATUS_UNAPPROVED)) {
+                    this.processActivate(id, t, actions.getNotes(), recordName);
+                    accessor.setPropertyValue("actionStatus", AppConstants.STATUS_APPROVED);
                 } else {
                     loggerService.log("Failed to approve " + recordName + ". Record doesn't have approve actions",
                             this.genericClasses.get(0).getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_FAILED, actions.getNotes());
@@ -548,9 +552,14 @@ public class ChasisResource<T, E extends Serializable, R> {
     }
 
     protected void processDeactivate(E id, T entity, String notes, String nickName) throws ExpectationFailed {
-        PropertyAccessor accessor = PropertyAccessorFactory.forBeanPropertyAccess(entity);
         String extra = this.getLogsExtraDescription(entity);
         loggerService.log("Done approving " + nickName + " deactivation " + extra,
+                entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
+    }
+
+    protected void processActivate(E id, T entity, String notes, String nickName) throws ExpectationFailed {
+        String extra = this.getLogsExtraDescription(entity);
+        loggerService.log("Done approving " + nickName + " activation " + extra,
                 entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
     }
 
@@ -645,6 +654,10 @@ public class ChasisResource<T, E extends Serializable, R> {
                 } else if (action.equalsIgnoreCase(AppConstants.ACTIVITY_DEACTIVATE)
                         && actionStatus.equalsIgnoreCase(AppConstants.STATUS_UNAPPROVED)) {
                     this.processDeclineDeactivation(id, t, actions.getNotes(), recordName);
+                    accessor.setPropertyValue("actionStatus", AppConstants.STATUS_DECLINED);
+                } else if (action.equalsIgnoreCase(AppConstants.ACTIVITY_ACTIVATION)
+                        && actionStatus.equalsIgnoreCase(AppConstants.STATUS_UNAPPROVED)) {
+                    this.processDeclineActivation(id, t, actions.getNotes(), recordName);
                     accessor.setPropertyValue("actionStatus", AppConstants.STATUS_DECLINED);
                 } else {
                     loggerService.log("Failed to decline " + recordName + ". Record doesn't have approve actions",
@@ -745,6 +758,12 @@ public class ChasisResource<T, E extends Serializable, R> {
     protected void processDeclineDeactivation(E id, T entity, String notes, String nickName) throws ExpectationFailed {
         String extra = this.getLogsExtraDescription(entity);
         loggerService.log("Declined Deactivation " + nickName + " " + extra,
+                entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
+    }
+
+    protected void processDeclineActivation(E id, T entity, String notes, String nickName) throws ExpectationFailed {
+        String extra = this.getLogsExtraDescription(entity);
+        loggerService.log("Declined Activation " + nickName + " " + extra,
                 entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
     }
 
