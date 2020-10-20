@@ -495,6 +495,16 @@ public class ChasisResource<T, E extends Serializable, R> {
                         && actionStatus.equalsIgnoreCase(AppConstants.STATUS_UNAPPROVED)) {
                     this.processActivate(id, t, actions.getNotes(), recordName);
                     accessor.setPropertyValue("actionStatus", AppConstants.STATUS_APPROVED);
+                } else if (action.equalsIgnoreCase(AppConstants.ACTIVITY_LOCK)
+                        && actionStatus.equalsIgnoreCase(AppConstants.STATUS_UNAPPROVED)) {
+                    this.processLock(id, t, actions.getNotes(), recordName);
+                    accessor.setPropertyValue("status", 6);
+                    accessor.setPropertyValue("actionStatus", AppConstants.STATUS_APPROVED);
+                } else if (action.equalsIgnoreCase(AppConstants.ACTIVITY_UNLOCK)
+                        && actionStatus.equalsIgnoreCase(AppConstants.STATUS_UNAPPROVED)) {
+                    this.processUnLock(id, t, actions.getNotes(), recordName);
+                    accessor.setPropertyValue("status", 2);
+                    accessor.setPropertyValue("actionStatus", AppConstants.STATUS_APPROVED);
                 } else {
                     loggerService.log("Failed to approve " + recordName + ". Record doesn't have approve actions",
                             this.genericClasses.get(0).getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_FAILED, actions.getNotes());
@@ -560,6 +570,20 @@ public class ChasisResource<T, E extends Serializable, R> {
     protected void processActivate(E id, T entity, String notes, String nickName) throws ExpectationFailed {
         String extra = this.getLogsExtraDescription(entity);
         loggerService.log("Done approving " + nickName + " activation " + extra,
+                entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
+    }
+
+
+    protected void processLock(E id, T entity, String notes, String nickName) throws ExpectationFailed {
+        String extra = this.getLogsExtraDescription(entity);
+        loggerService.log("Done approving " + nickName + " lock " + extra,
+                entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
+    }
+
+
+    protected void processUnLock(E id, T entity, String notes, String nickName) throws ExpectationFailed {
+        String extra = this.getLogsExtraDescription(entity);
+        loggerService.log("Done approving " + nickName + " unlock " + extra,
                 entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
     }
 
@@ -658,6 +682,14 @@ public class ChasisResource<T, E extends Serializable, R> {
                 } else if (action.equalsIgnoreCase(AppConstants.ACTIVITY_ACTIVATION)
                         && actionStatus.equalsIgnoreCase(AppConstants.STATUS_UNAPPROVED)) {
                     this.processDeclineActivation(id, t, actions.getNotes(), recordName);
+                    accessor.setPropertyValue("actionStatus", AppConstants.STATUS_DECLINED);
+                } else if (action.equalsIgnoreCase(AppConstants.ACTIVITY_LOCK)
+                        && actionStatus.equalsIgnoreCase(AppConstants.STATUS_UNAPPROVED)) {
+                    this.processDeclineLock(id, t, actions.getNotes(), recordName);
+                    accessor.setPropertyValue("actionStatus", AppConstants.STATUS_DECLINED);
+                } else if (action.equalsIgnoreCase(AppConstants.ACTIVITY_UNLOCK)
+                        && actionStatus.equalsIgnoreCase(AppConstants.STATUS_UNAPPROVED)) {
+                    this.processDeclineUnLocking(id, t, actions.getNotes(), recordName);
                     accessor.setPropertyValue("actionStatus", AppConstants.STATUS_DECLINED);
                 } else {
                     loggerService.log("Failed to decline " + recordName + ". Record doesn't have approve actions",
@@ -764,6 +796,19 @@ public class ChasisResource<T, E extends Serializable, R> {
     protected void processDeclineActivation(E id, T entity, String notes, String nickName) throws ExpectationFailed {
         String extra = this.getLogsExtraDescription(entity);
         loggerService.log("Declined Activation " + nickName + " " + extra,
+                entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
+    }
+
+
+    protected void processDeclineLock(E id, T entity, String notes, String nickName) throws ExpectationFailed {
+        String extra = this.getLogsExtraDescription(entity);
+        loggerService.log("Declined Lock " + nickName + " " + extra,
+                entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
+    }
+
+    protected void processDeclineUnLocking(E id, T entity, String notes, String nickName) throws ExpectationFailed {
+        String extra = this.getLogsExtraDescription(entity);
+        loggerService.log("Declined unLock " + nickName + " " + extra,
                 entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
     }
 
