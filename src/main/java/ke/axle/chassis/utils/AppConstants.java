@@ -11,8 +11,8 @@ import org.slf4j.MarkerFactory;
 
 /**
  * Used to define constants to be used within the library
+ *
  * @author Cornelius M
- * @version 0.0.1
  * @author Owori Juma
  * @version 1.2.3
  */
@@ -37,6 +37,9 @@ public class AppConstants {
     public static final String ACTIVITY_UNLOCK = "Unlock";
     public static final String ACTIVITY_LOCK = "Lock";
     public static final String ACTIVITY_AMEND = "Amend";
+    public static final String ACTIVITY_UNLOCKING = "Unlocking";
+    public static final String ACTIVITY_LOCKING = "Locking";
+
     //Record Status
     public static final String STATUS_ACTIVE = "Active";
     public static final String STATUS_INACTIVE = "Inactive";
@@ -55,10 +58,10 @@ public class AppConstants {
     public static final String STATUS_CANCELLED = "Cancelled";
     public static final String STATUS_PENDING = "Pending";
     public static final String STATUS_UNCONFIRMED = "Unconfirmed";
-    
+
     public static final String NO = "NO";
     public static final String YES = "YES";
-    
+
     public static final String CHECKER_GENERAL_ERROR = "Some Actions could not be processed successfully check audit logs for more details";
 
 }

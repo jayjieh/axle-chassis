@@ -24,7 +24,101 @@
   <component name="ChangeListManager">
     <list default="true" id="5b7d5820-f293-4db7-a9f9-1939292b5f9c" name="Default Changelist" comment="Added chained query">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/utils/AppConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/utils/AppConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringResourceChasis-1.4.5-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringResourceChasis-1.4.5-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringResourceChasis-1.4.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/allclasses-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/allclasses.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/allclasses.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/allpackages-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/constant-values.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/deprecated-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/index-all.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/index-all.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/ChasisResource.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/ChasisResource.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/ChasisUUID.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/ChasisUUID.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/EditChildEntity.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/EditChildEntity.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/EditDataWrapper.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/EditDataWrapper.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/EditEntity.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/EditEntity.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/EditEntityId.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/EditEntityId.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/EntityName.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/EntityName.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/Filter.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/Filter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/ModifiableChildEntityField.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/ModifiableChildEntityField.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/ModifiableField.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/ModifiableField.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/ModifiableQueryField.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/ModifiableQueryField.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/NickName.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/NickName.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/Searchable.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/Searchable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/TreeRoot.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/TreeRoot.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/Unique.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/Unique.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/ChasisUUID.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/ChasisUUID.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/EditChildEntity.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/EditChildEntity.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/EditDataWrapper.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/EditDataWrapper.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/EditEntity.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/EditEntity.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/EditEntityId.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/EditEntityId.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/EntityName.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/EntityName.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/Filter.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/Filter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/ModifiableChildEntityField.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/ModifiableChildEntityField.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/ModifiableField.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/ModifiableField.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/ModifiableQueryField.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/ModifiableQueryField.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/NickName.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/NickName.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/Searchable.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/Searchable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/TreeRoot.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/TreeRoot.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/Unique.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/Unique.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/class-use/ChasisResource.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/class-use/ChasisResource.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/enums/ModifiableFieldType.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/enums/ModifiableFieldType.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/enums/class-use/ModifiableFieldType.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/enums/class-use/ModifiableFieldType.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/enums/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/enums/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/enums/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/enums/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/enums/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/enums/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/exceptions/ExpectationFailed.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/exceptions/ExpectationFailed.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/exceptions/GeneralBadRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/exceptions/GeneralBadRequest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/exceptions/NotFoundException.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/exceptions/NotFoundException.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/exceptions/class-use/ExpectationFailed.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/exceptions/class-use/ExpectationFailed.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/exceptions/class-use/GeneralBadRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/exceptions/class-use/GeneralBadRequest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/exceptions/class-use/NotFoundException.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/exceptions/class-use/NotFoundException.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/exceptions/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/exceptions/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/exceptions/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/exceptions/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/exceptions/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/exceptions/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/AppConstants.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/AppConstants.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/ErrorList.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/ErrorList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/LoggerService.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/LoggerService.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/SharedMethods.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/SharedMethods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/SupportRepository.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/SupportRepository.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/class-use/AppConstants.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/class-use/AppConstants.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/class-use/ErrorList.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/class-use/ErrorList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/class-use/LoggerService.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/class-use/LoggerService.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/class-use/SharedMethods.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/class-use/SharedMethods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/class-use/SupportRepository.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/class-use/SupportRepository.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/ActionWrapper.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/ActionWrapper.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/ConstantsWrapper.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/ConstantsWrapper.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/ResponseWrapper.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/ResponseWrapper.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/class-use/ActionWrapper.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/class-use/ActionWrapper.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/class-use/ConstantsWrapper.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/class-use/ConstantsWrapper.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/class-use/ResponseWrapper.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/class-use/ResponseWrapper.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/member-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/member-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/member-search-index.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/overview-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/package-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/package-search-index.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/serialized-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/type-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/type-search-index.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/checkout" beforeDir="false" afterPath="$PROJECT_DIR$/target/checkout" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ke/axle/chassis/ChasisResource$ExcludeProxiedFields.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ke/axle/chassis/ChasisResource$ExcludeProxiedFields.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ke/axle/chassis/ChasisResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ke/axle/chassis/ChasisResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +252,8 @@
       <workItem from="1603092167162" duration="4217000" />
       <workItem from="1603111134340" duration="81000" />
       <workItem from="1603113369677" duration="672000" />
-      <workItem from="1603193572322" duration="1142000" />
+      <workItem from="1603193572322" duration="1735000" />
+      <workItem from="1605703152612" duration="1625000" />
     </task>
     <task id="LOCAL-00001" summary="Group ID Update">
       <created>1561463845702</created>

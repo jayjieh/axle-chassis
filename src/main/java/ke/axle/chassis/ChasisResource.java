@@ -505,6 +505,16 @@ public class ChasisResource<T, E extends Serializable, R> {
                     this.processUnLock(id, t, actions.getNotes(), recordName);
                     accessor.setPropertyValue("status", 2);
                     accessor.setPropertyValue("actionStatus", AppConstants.STATUS_APPROVED);
+                } else if (action.equalsIgnoreCase(AppConstants.ACTIVITY_LOCKING)
+                        && actionStatus.equalsIgnoreCase(AppConstants.STATUS_UNAPPROVED)) {
+                    this.processLock(id, t, actions.getNotes(), recordName);
+                    accessor.setPropertyValue("status", 6);
+                    accessor.setPropertyValue("actionStatus", AppConstants.STATUS_APPROVED);
+                } else if (action.equalsIgnoreCase(AppConstants.ACTIVITY_UNLOCKING)
+                        && actionStatus.equalsIgnoreCase(AppConstants.STATUS_UNAPPROVED)) {
+                    this.processUnLock(id, t, actions.getNotes(), recordName);
+                    accessor.setPropertyValue("status", 2);
+                    accessor.setPropertyValue("actionStatus", AppConstants.STATUS_APPROVED);
                 } else {
                     loggerService.log("Failed to approve " + recordName + ". Record doesn't have approve actions",
                             this.genericClasses.get(0).getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_FAILED, actions.getNotes());
