@@ -24,6 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5b7d5820-f293-4db7-a9f9-1939292b5f9c" name="Default Changelist" comment="Added chained query">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/utils/AppConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/utils/AppConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SpringResourceChasis-1.4.5-javadoc.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SpringResourceChasis-1.4.5-sources.jar" beforeDir="false" />
@@ -253,7 +254,7 @@
       <workItem from="1603111134340" duration="81000" />
       <workItem from="1603113369677" duration="672000" />
       <workItem from="1603193572322" duration="1735000" />
-      <workItem from="1605703152612" duration="1625000" />
+      <workItem from="1605703152612" duration="2115000" />
     </task>
     <task id="LOCAL-00001" summary="Group ID Update">
       <created>1561463845702</created>
