@@ -23,12 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b7d5820-f293-4db7-a9f9-1939292b5f9c" name="Default Changelist" comment="Added chained query">
+      <change afterPath="$PROJECT_DIR$/pom.xml.releaseBackup" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/release.properties" beforeDir="false" afterPath="$PROJECT_DIR$/release.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/utils/AppConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/utils/AppConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringResourceChasis-1.4.5-javadoc.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringResourceChasis-1.4.5-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SpringResourceChasis-1.4.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringResourceChasis-1.4.6-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringResourceChasis-1.4.6-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringResourceChasis-1.4.6.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/apidocs/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/allclasses-index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/apidocs/allclasses.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/allclasses.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/apidocs/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/allpackages-index.html" afterDir="false" />
@@ -116,9 +117,10 @@
       <change beforePath="$PROJECT_DIR$/target/apidocs/package-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/package-search-index.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/apidocs/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/serialized-form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/apidocs/type-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/apidocs/type-search-index.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/checkout" beforeDir="false" afterPath="$PROJECT_DIR$/target/checkout" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/checkout" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ke/axle/chassis/ChasisResource$ExcludeProxiedFields.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ke/axle/chassis/ChasisResource$ExcludeProxiedFields.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ke/axle/chassis/ChasisResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ke/axle/chassis/ChasisResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ke/axle/chassis/utils/AppConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ke/axle/chassis/utils/AppConstants.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -254,7 +256,7 @@
       <workItem from="1603111134340" duration="81000" />
       <workItem from="1603113369677" duration="672000" />
       <workItem from="1603193572322" duration="1735000" />
-      <workItem from="1605703152612" duration="2115000" />
+      <workItem from="1605703152612" duration="2260000" />
     </task>
     <task id="LOCAL-00001" summary="Group ID Update">
       <created>1561463845702</created>

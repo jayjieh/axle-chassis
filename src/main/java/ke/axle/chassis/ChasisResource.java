@@ -701,6 +701,14 @@ public class ChasisResource<T, E extends Serializable, R> {
                         && actionStatus.equalsIgnoreCase(AppConstants.STATUS_UNAPPROVED)) {
                     this.processDeclineUnLocking(id, t, actions.getNotes(), recordName);
                     accessor.setPropertyValue("actionStatus", AppConstants.STATUS_DECLINED);
+                } else if (action.equalsIgnoreCase(AppConstants.ACTIVITY_LOCKING)
+                        && actionStatus.equalsIgnoreCase(AppConstants.STATUS_UNAPPROVED)) {
+                    this.processDeclineLock(id, t, actions.getNotes(), recordName);
+                    accessor.setPropertyValue("actionStatus", AppConstants.STATUS_DECLINED);
+                } else if (action.equalsIgnoreCase(AppConstants.ACTIVITY_UNLOCKING)
+                        && actionStatus.equalsIgnoreCase(AppConstants.STATUS_UNAPPROVED)) {
+                    this.processDeclineUnLocking(id, t, actions.getNotes(), recordName);
+                    accessor.setPropertyValue("actionStatus", AppConstants.STATUS_DECLINED);
                 } else {
                     loggerService.log("Failed to decline " + recordName + ". Record doesn't have approve actions",
                             clazz.getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_FAILED, actions.getNotes());
