@@ -748,7 +748,7 @@ public class ChasisResource<T, E extends Serializable, R> {
     protected void processDeclineNew(E id, T entity, String notes, String nickName) throws ExpectationFailed {
         String extra = this.getLogsExtraDescription(entity);
         loggerService.log("Declined new " + nickName + " " + extra,
-                entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
+                entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_DECLINE, AppConstants.STATUS_COMPLETED, notes);
     }
 
     /**
@@ -772,7 +772,7 @@ public class ChasisResource<T, E extends Serializable, R> {
         }
         String extra = this.getLogsExtraDescription(entity);
         loggerService.log("Done declining " + nickName + " changes " + extra,
-                entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_UPDATE, AppConstants.STATUS_COMPLETED, notes);
+                entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_DECLINE, AppConstants.STATUS_COMPLETED, notes);
     }
 
     /**
@@ -789,7 +789,7 @@ public class ChasisResource<T, E extends Serializable, R> {
     protected void processDeclineDeletion(E id, T entity, String notes, String nickName) throws ExpectationFailed {
         String extra = this.getLogsExtraDescription(entity);
         loggerService.log("Done declining " + nickName + " deletion " + extra,
-                entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
+                entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_DECLINE, AppConstants.STATUS_COMPLETED, notes);
     }
 
     /**
@@ -802,32 +802,32 @@ public class ChasisResource<T, E extends Serializable, R> {
     protected void processDeclineConfirmation(E id, T entity, String notes, String nickName) throws ExpectationFailed {
         String extra = this.getLogsExtraDescription(entity);
         loggerService.log("Declined Confirmation " + nickName + " " + extra,
-                entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
+                entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_DECLINE, AppConstants.STATUS_COMPLETED, notes);
     }
 
     protected void processDeclineDeactivation(E id, T entity, String notes, String nickName) throws ExpectationFailed {
         String extra = this.getLogsExtraDescription(entity);
         loggerService.log("Declined Deactivation " + nickName + " " + extra,
-                entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
+                entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_DECLINE, AppConstants.STATUS_COMPLETED, notes);
     }
 
     protected void processDeclineActivation(E id, T entity, String notes, String nickName) throws ExpectationFailed {
         String extra = this.getLogsExtraDescription(entity);
         loggerService.log("Declined Activation " + nickName + " " + extra,
-                entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
+                entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_DECLINE, AppConstants.STATUS_COMPLETED, notes);
     }
 
 
     protected void processDeclineLock(E id, T entity, String notes, String nickName) throws ExpectationFailed {
         String extra = this.getLogsExtraDescription(entity);
         loggerService.log("Declined Lock " + nickName + " " + extra,
-                entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
+                entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_DECLINE, AppConstants.STATUS_COMPLETED, notes);
     }
 
     protected void processDeclineUnLocking(E id, T entity, String notes, String nickName) throws ExpectationFailed {
         String extra = this.getLogsExtraDescription(entity);
         loggerService.log("Declined unLock " + nickName + " " + extra,
-                entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_APPROVE, AppConstants.STATUS_COMPLETED, notes);
+                entity.getClass().getSimpleName(), id, AppConstants.ACTIVITY_DECLINE, AppConstants.STATUS_COMPLETED, notes);
     }
 
     /**
