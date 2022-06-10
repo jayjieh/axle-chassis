@@ -862,6 +862,7 @@ public class ChasisResource<T, E extends Serializable, R> {
     private void validateUniqueFields(T t) throws GeneralBadRequest {
 
         //Declare properties
+        Boolean usesSuperClassId = false;
         PropertyAccessor accessor = PropertyAccessorFactory.forBeanPropertyAccess(t);
         Class clazz = SharedMethods.getGenericClasses(this.getClass()).get(0);
         String fieldId = null;
@@ -884,9 +885,23 @@ public class ChasisResource<T, E extends Serializable, R> {
             }
         }
 
-        //check if id field is present
+        // check if id field is present
         if (fieldId == null) {
-            throw new RuntimeException("Failed to validate unique fields. Entity doesn't have an id field");
+            // check whether the entity inherits from Java Object class
+            if (clazz.getSuperclass().getName().equals("java.lang.Object")) {
+                throw new RuntimeException("Failed to validate unique fields. Entity doesn't have an id field");
+            } else {
+                // this means the entity inherits from another entity;
+                usesSuperClassId = true;
+                // retrieve id field from super class
+                for (Field field : clazz.getSuperclass().getDeclaredFields()) {
+                    if (field.isAnnotationPresent(Id.class)) {
+                        fieldId = field.getName();
+                        id = (E) accessor.getPropertyValue(field.getName());
+                    }
+                }
+            }
+
         }
 
         //validate unique fields
