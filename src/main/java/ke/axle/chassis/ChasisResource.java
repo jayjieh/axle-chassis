@@ -953,7 +953,18 @@ public class ChasisResource<T, E extends Serializable, R> {
         }
 
         if (fieldId == null) {
-            throw new RuntimeException("Entity doesn't have an id field");
+            // check whether the entity inherits from Java Object class
+            if (clazz.getSuperclass().getName().equals("java.lang.Object")) {
+                throw new RuntimeException("Entity doesn't have an id field");
+            } else {
+                // this means the entity inherits from another entity;
+                // retrieve id field from super class
+                for (Field field : clazz.getSuperclass().getDeclaredFields()) {
+                    if (field.isAnnotationPresent(Id.class)) {
+                        fieldId = field.getName();
+                    }
+                }
+            }
         }
 
         CriteriaBuilder criteriaBuilder = this.entityManager.getCriteriaBuilder();
