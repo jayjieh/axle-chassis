@@ -23,9 +23,150 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b7d5820-f293-4db7-a9f9-1939292b5f9c" name="Default Changelist" comment="Added chained query">
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/checkout" beforeDir="false" afterPath="$PROJECT_DIR$/target/checkout" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cm/projects/spring/resource/chasis/ChasisResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cm/projects/spring/resource/chasis/ChasisResourceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringResourceChasis-1.4.8-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringResourceChasis-1.4.8-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringResourceChasis-1.4.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/allclasses-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/allclasses.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/allpackages-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/constant-values.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/deprecated-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/element-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/index-all.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/external/jquery/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/images/ui-bg_flat_0_aaaaaa_40x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/images/ui-bg_flat_75_ffffff_40x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/images/ui-bg_glass_65_ffffff_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/images/ui-icons_222222_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/images/ui-icons_454545_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/images/ui-icons_888888_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/jquery-3.3.1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/jquery-migrate-3.0.1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/jquery-ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/jquery-ui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/jquery-ui.structure.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/jquery-ui.structure.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/jszip-utils/dist/jszip-utils-ie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/jszip-utils/dist/jszip-utils-ie.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/jszip-utils/dist/jszip-utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/jszip-utils/dist/jszip-utils.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/jszip/dist/jszip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/jquery/jszip/dist/jszip.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/ChasisResource.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/ChasisUUID.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/EditChildEntity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/EditDataWrapper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/EditEntity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/EditEntityId.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/EntityName.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/Filter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/ModifiableChildEntityField.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/ModifiableField.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/ModifiableQueryField.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/NickName.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/Searchable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/TreeRoot.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/Unique.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/ChasisUUID.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/EditChildEntity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/EditDataWrapper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/EditEntity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/EditEntityId.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/EntityName.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/Filter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/ModifiableChildEntityField.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/ModifiableField.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/ModifiableQueryField.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/NickName.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/Searchable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/TreeRoot.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/class-use/Unique.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/annotations/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/class-use/ChasisResource.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/enums/ModifiableFieldType.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/enums/class-use/ModifiableFieldType.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/enums/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/enums/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/enums/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/exceptions/ExpectationFailed.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/exceptions/GeneralBadRequest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/exceptions/NotFoundException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/exceptions/class-use/ExpectationFailed.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/exceptions/class-use/GeneralBadRequest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/exceptions/class-use/NotFoundException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/exceptions/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/exceptions/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/exceptions/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/AppConstants.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/ErrorList.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/LoggerService.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/SharedMethods.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/SupportRepository.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/class-use/AppConstants.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/class-use/ErrorList.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/class-use/LoggerService.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/class-use/SharedMethods.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/class-use/SupportRepository.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/utils/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/ActionWrapper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/ConstantsWrapper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/ResponseWrapper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/class-use/ActionWrapper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/class-use/ConstantsWrapper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/class-use/ResponseWrapper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/ke/axle/chassis/wrappers/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/member-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/member-search-index.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/overview-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/package-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/package-search-index.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/resources/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/resources/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/serialized-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/type-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/apidocs/type-search-index.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/checkout" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ke/axle/chassis/ChasisResource$ExcludeProxiedFields.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ke/axle/chassis/ChasisResource$ExcludeProxiedFields.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ke/axle/chassis/ChasisResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ke/axle/chassis/ChasisResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/javadoc-bundle-options/javadoc-options-javadoc-resources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/javadoc-bundle-options/javadoc-options-javadoc-resources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/javadoc-bundle-options/package-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cm/projects/spring/resource/chasis/ChasisResourceTest$LoggerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/cm/projects/spring/resource/chasis/ChasisResourceTest$LoggerServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cm/projects/spring/resource/chasis/ChasisResourceTest$TestConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/cm/projects/spring/resource/chasis/ChasisResourceTest$TestConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cm/projects/spring/resource/chasis/ChasisResourceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/cm/projects/spring/resource/chasis/ChasisResourceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +191,29 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+  </component>
   <component name="JupyterTrust" id="0ca0d6bb-8f16-4c70-a77d-25629854478a" />
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="r8716ag2" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="enabledProfiles">
       <list>
@@ -69,24 +232,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="vue.rearranger.settings.migration" value="true" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/projects/library/springboot-chassis/pom.xml",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "80dce947bf2600ef74a4d9b9e28145c0"
+  }
+}]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean package -DskipTests=true" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="ChasisResourceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpringResourceChasis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cm.projects.spring.resource.chasis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cm.projects.spring.resource.chasis" />
+      <option name="MAIN_CLASS_NAME" value="com.cm.projects.spring.resource.chasis.ChasisResourceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ChasisResourceTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -157,6 +347,7 @@
       <workItem from="1603193572322" duration="1735000" />
       <workItem from="1605703152612" duration="3931000" />
       <workItem from="1611747574348" duration="1297000" />
+      <workItem from="1654837532306" duration="4390000" />
     </task>
     <task id="LOCAL-00001" summary="Group ID Update">
       <created>1561463845702</created>
@@ -279,7 +470,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -297,43 +487,21 @@
     <MESSAGE value="Added chained query" />
     <option name="LAST_COMMIT_MESSAGE" value="Added chained query" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="552" y="161" key="#Plugins" timestamp="1603111180533">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="161" key="#Plugins/0.0.1920.1040@0.0.1920.1040" timestamp="1603111180533" />
-    <state x="765" y="196" key="#com.intellij.ide.util.MemberChooser" timestamp="1594917039359">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="765" y="196" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1594917039359" />
-    <state x="725" y="357" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog" timestamp="1594969713428">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="725" y="357" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594969713428" />
-    <state width="1876" height="257" key="GridCell.Tab.0.bottom" timestamp="1594977107892">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1876" height="257" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594977107892" />
-    <state width="1876" height="257" key="GridCell.Tab.0.center" timestamp="1594977107892">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1876" height="257" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594977107892" />
-    <state width="1876" height="257" key="GridCell.Tab.0.left" timestamp="1594977107892">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1876" height="257" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594977107892" />
-    <state width="1876" height="257" key="GridCell.Tab.0.right" timestamp="1594977107892">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1876" height="257" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594977107892" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1595125937302">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1595125937302" />
-    <state x="616" y="173" width="672" height="676" key="search.everywhere.popup" timestamp="1594897452183">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="616" y="173" width="672" height="676" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1594897452183" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ke/axle/chassis/ChasisResource.java</url>
+          <line>220</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/cm/projects/spring/resource/chasis/ChasisResourceTest.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="masterDetails">
     <states>

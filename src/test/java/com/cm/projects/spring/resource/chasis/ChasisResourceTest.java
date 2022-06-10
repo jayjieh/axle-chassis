@@ -7,14 +7,18 @@ package com.cm.projects.spring.resource.chasis;
 
 import ke.axle.chassis.utils.LoggerService;
 import ke.axle.chassis.wrappers.ResponseWrapper;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
 import static org.junit.Assert.*;
+
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,19 +27,19 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- *
  * @author Cornelius M
  * @version 0.0.1
  */
 @RunWith(SpringRunner.class)
 @DataJpaTest
 @Transactional
-@SpringBootTest
+@SpringBootTest(classes = {LoggerService.class})
 public class ChasisResourceTest {
 
     @PersistenceContext
@@ -79,12 +83,12 @@ public class ChasisResourceTest {
         Nerd john = new Nerd("Cornelius M", "Developer");
         ResponseEntity<ResponseWrapper<Nerd>> res = this.nerdResource.create(john);
         assertEquals("Creating new entity failed", HttpStatus.CREATED, res.getStatusCode());
-        
+
         log.info("Testing unique fields");
         Nerd mary = new Nerd("Cornelius M", "Developer");
         res = this.nerdResource.create(mary);
         assertEquals("Unique fields validation failed", HttpStatus.CONFLICT, res.getStatusCode());
-        
+
         log.warn("Yet to implement tests for validating relational entities");
     }
 
@@ -197,14 +201,15 @@ public class ChasisResourceTest {
     /**
      * Used to mock logger service
      */
-    private class LoggerServiceImpl implements LoggerService {
+    @Service
+    private static class LoggerServiceImpl implements LoggerService {
 
         private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
         @Override
         public void log(String description, String entity, Object entityId, String activity, String activityStatus, String notes) {
             this.logger.info("\n========== TEST AUDIT LOG ========== \nentity: {} \nentityId: {} \nactivity: {} "
-                    + "\nactivityStatus: {} \ndescription: {} \nnotes: {}", entity, 
+                            + "\nactivityStatus: {} \ndescription: {} \nnotes: {}", entity,
                     entityId, activity, activityStatus, description, notes);
         }
 
@@ -216,7 +221,7 @@ public class ChasisResourceTest {
         @Override
         public void log(String description, String entity, Object entityId, Long userId, String activity, String activityStatus, String notes) {
             this.logger.info("\n========== TEST AUDIT LOG ========== \nentity: {} \nentityId: {} \nactivity: {} "
-                    + "\nactivityStatus: {} \ndescription: {} \nnotes: {}", entity, 
+                            + "\nactivityStatus: {} \ndescription: {} \nnotes: {}", entity,
                     entityId, activity, activityStatus, description, notes);
         }
 
